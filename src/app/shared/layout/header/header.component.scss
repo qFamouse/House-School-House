@@ -81,9 +81,7 @@
   }
 
   &__pages {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: none;
   }
 
   &__page {
@@ -130,24 +128,27 @@
 
     // if mobile menu is open, and we extend with then disable navbar__pages_open changes for close this menu
     &__pages {
+      // unset mobile changes
       color: unset;
       top: unset;
       right: unset;
       bottom: unset;
       position: unset;
       flex-direction: unset;
-      align-items: unset;
       text-align: unset;
       background: unset;
       transition: unset;
       width: unset;
       height: unset;
-      display: unset;
-      justify-content: unset;
       background: unset;
       backdrop-filter: unset;
 
       transform: translate(0);
+
+      // desktop settings
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     &__page {
