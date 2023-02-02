@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { LayoutComponent } from "./components/layout/layout.component";
 import { MapPageComponent } from "../modules/map/components/map-page/map-page.component";
+import { appPages } from "../shared/constants/pages";
 
 const routes: Routes = [
 	{
@@ -9,7 +10,7 @@ const routes: Routes = [
 		component: LayoutComponent,
 		children: [
 			{
-				path: "map",
+				path: appPages.map.name,
 				component: MapPageComponent
 			}
 		]
