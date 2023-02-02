@@ -1,5 +1,12 @@
 import { Component } from "@angular/core";
-import { latLng, MapOptions, tileLayer } from "leaflet";
+import { MapOptions, Map } from "leaflet";
+import {
+	attributionControl,
+	controlLayersConfig,
+	mapOptions,
+	zoomControl
+} from "../../configuration/map";
+import { LeafletControlLayersConfig } from "@asymmetrik/ngx-leaflet";
 
 @Component({
 	selector: "app-map-page",
@@ -7,14 +14,11 @@ import { latLng, MapOptions, tileLayer } from "leaflet";
 	styleUrls: ["./map-page.component.scss"]
 })
 export class MapPageComponent {
-	options: MapOptions = {
-		layers: [
-			tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-				maxZoom: 18,
-				attribution: "..."
-			})
-		],
-		zoom: 5,
-		center: latLng(46.879966, -121.726909)
-	};
+	mapOptions: MapOptions = mapOptions;
+	controlLayersConfig: LeafletControlLayersConfig = controlLayersConfig;
+
+	onMapReady(map: Map) {
+		map.addControl(zoomControl);
+		map.addControl(attributionControl);
+	}
 }
