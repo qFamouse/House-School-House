@@ -1,0 +1,8 @@
+// asymmetrik/ngx-leaflet generate custom map element, and for fill all space we should set flex-grow into his custom map element
+:host {
+  flex-grow: 1;
+}
+
+#map {
+  height: 100%;
+}
