@@ -30,6 +30,7 @@
               "./node_modules/normalize.css/normalize.css",
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "./node_modules/leaflet/dist/leaflet.css",
+              "@geoman-io/leaflet-geoman-free/dist/leaflet-geoman.css",
               "src/styles.scss"
             ],
             "scripts": []

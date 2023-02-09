@@ -1,5 +1,6 @@
-import { Control, latLng, MapOptions, tileLayer } from "leaflet";
+import { Control, latLng, MapOptions, tileLayer, PM } from "leaflet";
 import { LeafletControlLayersConfig } from "@asymmetrik/ngx-leaflet";
+import "@geoman-io/leaflet-geoman-free";
 
 export const mapOptions: MapOptions = {
 	layers: [
@@ -27,3 +28,14 @@ export const attributionControl = new Control.Attribution({
 		'<a href="https://leafletjs.com" title="A JavaScript library for interactive maps">Leaflet</a>',
 	position: "bottomright"
 });
+
+export const geomanToolbarOptions: PM.ToolbarOptions = {
+	position: "topleft",
+	drawMarker: false,
+	drawCircleMarker: false,
+	drawPolyline: false,
+	drawRectangle: false,
+	drawPolygon: false,
+	drawCircle: false,
+	drawText: false
+};

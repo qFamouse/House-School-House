@@ -3,10 +3,12 @@ import { MapOptions, Map } from "leaflet";
 import {
 	attributionControl,
 	controlLayersConfig,
+	geomanToolbarOptions,
 	mapOptions,
 	zoomControl
 } from "../../configuration/map";
 import { LeafletControlLayersConfig } from "@asymmetrik/ngx-leaflet";
+import "@geoman-io/leaflet-geoman-free";
 
 @Component({
 	selector: "app-map-page",
@@ -20,5 +22,7 @@ export class MapPageComponent {
 	onMapReady(map: Map) {
 		map.addControl(zoomControl);
 		map.addControl(attributionControl);
+
+		map.pm.addControls(geomanToolbarOptions);
 	}
 }
