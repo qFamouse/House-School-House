@@ -23,6 +23,7 @@
     "@asymmetrik/ngx-leaflet": "^15.0.1",
     "@geoman-io/leaflet-geoman-free": "^2.14.1",
     "leaflet": "^1.9.3",
+    "leaflet-sidebar-v2": "^3.2.3",
     "normalize.css": "^8.0.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.5.0",
