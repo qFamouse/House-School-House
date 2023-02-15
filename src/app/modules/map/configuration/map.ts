@@ -27,7 +27,7 @@ export const zoomControl = new Control.Zoom({});
 export const attributionControl = new Control.Attribution({
 	prefix:
 		'<a href="https://leafletjs.com" title="A JavaScript library for interactive maps">Leaflet</a>',
-	position: "bottomright"
+	position: "bottomleft"
 });
 
 export const geomanToolbarOptions: PM.ToolbarOptions = {
