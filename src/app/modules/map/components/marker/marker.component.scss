@@ -3,6 +3,7 @@ $image-with: 50px;
 
 
 .marker {
+  cursor: pointer;
   display: grid;
   grid-template-columns: $image-with 1fr;
   padding: 5px 0;
