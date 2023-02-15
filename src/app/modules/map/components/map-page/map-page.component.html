@@ -1,6 +1,5 @@
 <div id="map" leaflet
      [leafletOptions]="mapOptions"
-     [leafletLayersControl]="controlLayersConfig"
      (leafletMapReady)="onMapReady($event)"
 ></div>
 
@@ -26,21 +25,13 @@
                 <h1 class="leaflet-sidebar-header">Конструктор</h1>
             </div>
             <div class="custom-leaflet-sidebar-content">
-                <app-marker></app-marker> <hr>
-                <app-marker></app-marker> <hr>
-                <app-marker></app-marker> <hr>
-                <app-marker></app-marker> <hr>
-                <app-marker></app-marker> <hr>
-                <app-marker></app-marker> <hr>
-                <app-marker></app-marker> <hr>
-                <app-marker></app-marker> <hr>
-                <app-marker></app-marker> <hr>
-                <app-marker></app-marker> <hr>
-                <app-marker></app-marker> <hr>
-                <app-marker></app-marker> <hr>
-                <app-marker></app-marker> <hr>
-                <app-marker></app-marker> <hr>
-                <app-marker></app-marker> <hr>
+                <app-marker *ngFor="let sign of signs"
+                            [src]="sign.src"
+                            [alt]="sign.signNumber"
+                            [title]="sign.title"
+                            [description]="sign.explanation"
+                            (click)="drawSign(sign.src)"
+                ></app-marker>
                 <div></div>
             </div>
         </div>

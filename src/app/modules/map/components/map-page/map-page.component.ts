@@ -1,18 +1,18 @@
 /// <reference types='leaflet-sidebar-v2' />
 import { Component } from "@angular/core";
-import { Map, MapOptions } from "leaflet";
+import { Map, MapOptions, Icon, IconOptions } from "leaflet";
 import {
 	attributionControl,
-	controlLayersConfig,
 	geomanToolbarOptions,
 	mapOptions,
 	sidebarControl,
 	zoomControl
 } from "../../configuration/map";
-import { LeafletControlLayersConfig } from "@asymmetrik/ngx-leaflet";
 import "@geoman-io/leaflet-geoman-free";
 import { MatIconRegistry } from "@angular/material/icon";
 import { DomSanitizer } from "@angular/platform-browser";
+import { Sign } from "../../../../shared/models/sign";
+import { signs } from "../../configuration/signs";
 
 @Component({
 	selector: "app-map-page",
@@ -20,8 +20,9 @@ import { DomSanitizer } from "@angular/platform-browser";
 	styleUrls: ["./map-page.component.scss"]
 })
 export class MapPageComponent {
+	map!: Map;
 	mapOptions: MapOptions = mapOptions;
-	controlLayersConfig: LeafletControlLayersConfig = controlLayersConfig;
+	signs: Sign[] = signs;
 	constructor(matIconRegistry: MatIconRegistry, domSanitizer: DomSanitizer) {
 		matIconRegistry.addSvgIcon(
 			"github",
@@ -34,5 +35,20 @@ export class MapPageComponent {
 		map.addControl(attributionControl);
 		map.pm.addControls(geomanToolbarOptions);
 		map.addControl(sidebarControl);
+
+		this.map = map;
+	}
+
+	drawSign(iconUrl: string) {
+		this.map.pm.enableDraw("Marker", {
+			markerStyle: {
+				icon: new Icon<IconOptions>({
+					iconUrl: iconUrl,
+					iconSize: [35, 35],
+					iconAnchor: [20, 25]
+				})
+			},
+			continueDrawing: false
+		});
 	}
 }
