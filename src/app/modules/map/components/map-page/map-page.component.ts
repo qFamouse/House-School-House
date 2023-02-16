@@ -1,6 +1,6 @@
 /// <reference types='leaflet-sidebar-v2' />
 import { Component } from "@angular/core";
-import { Map, MapOptions, Icon, IconOptions } from "leaflet";
+import {Map, MapOptions, Icon, IconOptions, Control} from "leaflet";
 import {
 	attributionControl,
 	geomanToolbarOptions,
@@ -34,7 +34,14 @@ export class MapPageComponent {
 		map.addControl(zoomControl);
 		map.addControl(attributionControl);
 		map.pm.addControls(geomanToolbarOptions);
-		map.addControl(sidebarControl);
+    // TODO: Bug with sidebar when we adding control from configuration
+		// map.addControl(sidebarControl);
+    new Control.Sidebar({
+      position: "right",
+      autopan: true,
+      closeButton: true,
+      container: "sidebar"
+    }).addTo(map);
 
 		this.map = map;
 	}

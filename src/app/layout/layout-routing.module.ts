@@ -3,6 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { LayoutComponent } from "./components/layout/layout.component";
 import { MapPageComponent } from "../modules/map/components/map-page/map-page.component";
 import { appPages } from "../shared/constants/pages";
+import {PassportPageComponent} from "../modules/passport/components/passport-page/passport-page.component";
 
 const routes: Routes = [
 	{
@@ -12,7 +13,11 @@ const routes: Routes = [
 			{
 				path: appPages.map.name,
 				component: MapPageComponent
-			}
+			},
+      {
+        path: appPages.passport.name,
+        component: PassportPageComponent
+      }
 		]
 	}
 ];

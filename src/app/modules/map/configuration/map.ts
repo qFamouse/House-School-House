@@ -41,7 +41,7 @@ export const geomanToolbarOptions: PM.ToolbarOptions = {
 	drawText: false
 };
 
-export const sidebarControl = new Control.Sidebar({
+export let sidebarControl = new Control.Sidebar({
 	position: "right",
 	autopan: true,
 	closeButton: true,
