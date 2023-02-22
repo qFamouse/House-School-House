@@ -1,31 +1,13 @@
 <mat-stepper [orientation]="(stepperOrientation | async)!">
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
-  <mat-step></mat-step>
+    <mat-step [stepControl]="titularFormGroup" label="Титульный лист">
+      <form [formGroup]="titularFormGroup">
+        <mat-form-field class="mat-form-field">
+          <mat-label>Наименование учреждения образования</mat-label>
+          <input matInput [formControlName]="passportVariables.name_of_the_educational_institution" required>
+          <mat-error *ngIf="titularFormGroup.controls[passportVariables.name_of_the_educational_institution]?.hasError('required')">
+            Обязательно к заполнению
+          </mat-error>
+        </mat-form-field>
+      </form>
+    </mat-step>
 </mat-stepper>
