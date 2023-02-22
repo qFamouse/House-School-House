@@ -4,9 +4,10 @@ import { PassportPageComponent } from "./components/passport-page/passport-page.
 import { MatStepperModule } from "@angular/material/stepper";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatInputModule } from "@angular/material/input";
+import { PassportInputComponent } from "./components/passport-input/passport-input.component";
 
 @NgModule({
-	declarations: [PassportPageComponent],
+	declarations: [PassportPageComponent, PassportInputComponent],
 	imports: [
 		CommonModule,
 		MatStepperModule,
