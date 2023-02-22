@@ -5,6 +5,7 @@ import { MatStepperModule } from "@angular/material/stepper";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatInputModule } from "@angular/material/input";
 import { PassportInputComponent } from "./components/passport-input/passport-input.component";
+import { MatButtonModule } from "@angular/material/button";
 
 @NgModule({
 	declarations: [PassportPageComponent, PassportInputComponent],
@@ -13,7 +14,8 @@ import { PassportInputComponent } from "./components/passport-input/passport-inp
 		MatStepperModule,
 		ReactiveFormsModule,
 		MatInputModule,
-		FormsModule
+		FormsModule,
+		MatButtonModule
 	]
 })
 export class PassportModule {}

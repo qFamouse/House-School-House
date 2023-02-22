@@ -7,6 +7,10 @@ import {
 	PassportTemplate,
 	PassportVariables
 } from "../../models/passport-template.model";
+import PizZipUtils from "pizzip/utils";
+import Docxtemplater from "docxtemplater";
+import { saveAs } from "file-saver";
+import * as PizZip from "pizzip";
 
 @Component({
 	selector: "app-passport-page",
@@ -25,6 +29,31 @@ export class PassportPageComponent {
 		this.stepperOrientation = breakpointObserver
 			.observe("(min-width: 800px)")
 			.pipe(map(({ matches }) => (matches ? "horizontal" : "vertical")));
+	}
+
+	generate() {
+		PizZipUtils.getBinaryContent(
+			"/assets/passport-template.docx",
+			(error: Error | null, content: string) => {
+				if (error) {
+					throw error;
+				}
+
+				const zip = new PizZip(content);
+				const doc = new Docxtemplater(zip, {});
+
+				doc.setData(this.passportTemplate);
+				doc.render();
+
+				const out = doc.getZip().generate({
+					type: "blob",
+					mimeType:
+						"application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+				});
+
+				saveAs(out, "passport.docx");
+			}
+		);
 	}
 
 	titularFormGroup = this.formBuilder.group({
