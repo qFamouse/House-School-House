@@ -1,9 +1,9 @@
 <mat-stepper [orientation]="(stepperOrientation | async)!">
     <mat-step [stepControl]="titularFormGroup" label="Титульный лист">
       <app-passport-input
-              [formGroup]="titularFormGroup"
-              [label]="'Наименование учреждения образования'"
-              [formControlName]="passportVariables.name_of_the_educational_institution"
+              [psFormGroup]="titularFormGroup"
+              [psLabel]="'Наименование учреждения образования'"
+              [psFormControlName]="passportVariables.name_of_the_educational_institution"
               [abstractControl]="titularFormGroup.controls[passportVariables.name_of_the_educational_institution]"
       ></app-passport-input>
     </mat-step>

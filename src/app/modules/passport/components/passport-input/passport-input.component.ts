@@ -17,9 +17,9 @@ export class PassportInputComponent {
 	}
 	@Output() valueChange: EventEmitter<string> = new EventEmitter<string>();
 
-	@Input() label: string = "";
-	@Input() formControlName: string = "";
-	@Input() formGroup: FormGroup = undefined;
+	@Input() psLabel: string = "";
+	@Input() psFormControlName: string = "";
+	@Input() psFormGroup: FormGroup = undefined;
 	@Input() abstractControl: AbstractControl<any, any>;
 
 	constructor() {}
