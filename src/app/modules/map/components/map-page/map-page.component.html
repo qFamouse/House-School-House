@@ -9,6 +9,9 @@
             <li>
                 <a href="#markers" role="tab"><mat-icon>place</mat-icon></a>
             </li>
+          <li>
+            <a href="#legend" role="tab"><mat-icon>streetview</mat-icon></a>
+          </li>
         </ul>
 
         <ul role="tablist">
@@ -19,21 +22,33 @@
     </div>
 
     <div class="leaflet-sidebar-content">
-        <div class="leaflet-sidebar-pane" id="markers">
-            <div>
-                <div class="leaflet-sidebar-close"><mat-icon>keyboard_arrow_right</mat-icon></div>
-                <h1 class="leaflet-sidebar-header">Конструктор</h1>
-            </div>
-            <div class="custom-leaflet-sidebar-content">
-                <app-marker *ngFor="let sign of signs"
-                            [src]="sign.src"
-                            [alt]="sign.signNumber"
-                            [title]="sign.title"
-                            [description]="sign.explanation"
-                            (click)="drawSign(sign.src)"
-                ></app-marker>
-                <div></div>
-            </div>
+      <div class="leaflet-sidebar-pane" id="markers">
+        <div class="custom-sidebar-pane-wrapper">
+          <div>
+            <div class="leaflet-sidebar-close"><mat-icon>keyboard_arrow_right</mat-icon></div>
+            <h1 class="leaflet-sidebar-header">Конструктор</h1>
+          </div>
+          <div class="custom-leaflet-sidebar-content">
+            <app-marker *ngFor="let sign of signs"
+                        [src]="sign.src"
+                        [alt]="sign.signNumber"
+                        [title]="sign.title"
+                        [description]="sign.explanation"
+                        (click)="drawSign(sign.src, sign.title)"
+            ></app-marker>
+          </div>
         </div>
+      </div>
+      <div class="leaflet-sidebar-pane" id="legend">
+        <div class="custom-sidebar-pane-wrapper">
+          <div>
+            <div class="leaflet-sidebar-close"><mat-icon>keyboard_arrow_right</mat-icon></div>
+            <h1 class="leaflet-sidebar-header">Легенда</h1>
+          </div>
+          <div class="custom-leaflet-sidebar-content">
+            <app-legend [storage]="signStorage"></app-legend>
+          </div>
+        </div>
+      </div>
     </div>
 </div>

@@ -33,9 +33,10 @@ a[role=tab], .leaflet-sidebar-close {
   margin-bottom: 0;
 }
 
-.leaflet-sidebar-pane {
+.custom-sidebar-pane-wrapper {
   position: absolute;
   height: 100%;
+  width: 100%;
   overflow: hidden;
 
   display: flex;
@@ -43,8 +44,10 @@ a[role=tab], .leaflet-sidebar-close {
 }
 
 .custom-leaflet-sidebar-content {
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   height: 100%;
+  width: 100%;
 
   // Custom scroll
   &::-webkit-scrollbar {

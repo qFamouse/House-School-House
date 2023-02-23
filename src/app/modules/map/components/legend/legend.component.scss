@@ -1,0 +1,29 @@
+.legend {
+  padding: 1em;
+
+  &__table {
+    border-collapse: separate;
+    border-spacing: 0 1em;
+  }
+
+  &__td {
+    &_middle {
+      margin: auto;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__image-container {
+    width: 60px;
+  }
+
+  &__image {
+    width: 80%;
+  }
+
+  &__title {
+    width: 150px;
+  }
+}
