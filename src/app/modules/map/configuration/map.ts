@@ -47,3 +47,22 @@ export let sidebarControl = new Control.Sidebar({
 	closeButton: true,
 	container: "sidebar"
 });
+
+export const routeControlOptions: PM.CustomControlOptions = {
+	name: "Polyline",
+	block: "draw",
+	title: "Построение маршрута",
+	className: "leaflet-pm-icon-route"
+};
+
+export const geomanGlobalOptions: PM.GlobalOptions = {
+	hintlineStyle: {
+		color: "red"
+	},
+	templineStyle: {
+		color: "green"
+	},
+	pathOptions: {
+		color: "black"
+	}
+};

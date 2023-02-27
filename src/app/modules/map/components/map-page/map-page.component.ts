@@ -9,8 +9,10 @@ import {
 } from "leaflet";
 import {
 	attributionControl,
+	geomanGlobalOptions,
 	geomanToolbarOptions,
 	mapOptions,
+	routeControlOptions,
 	sidebarControl,
 	zoomControl
 } from "../../configuration/map";
@@ -49,6 +51,9 @@ export class MapPageComponent {
 			container: "sidebar"
 		}).addTo(map);
 
+		map.pm.Toolbar.copyDrawControl("Polyline", routeControlOptions);
+		map.pm.setGlobalOptions(geomanGlobalOptions);
+
 		this.map = map;
 
 		map.on("pm:remove", (event: any) => {
@@ -82,25 +87,6 @@ export class MapPageComponent {
 			}
 
 			console.log(this.signStorage);
-		});
-
-		map.pm.Toolbar.copyDrawControl("Polyline", {
-			name: "Polyline",
-			block: "draw",
-			title: "Построение маршрута",
-			className: "leaflet-pm-icon-route"
-		});
-
-		map.pm.setGlobalOptions({
-			hintlineStyle: {
-				color: "red"
-			},
-			templineStyle: {
-				color: "green"
-			},
-			pathOptions: {
-				color: "black"
-			}
 		});
 	}
 
