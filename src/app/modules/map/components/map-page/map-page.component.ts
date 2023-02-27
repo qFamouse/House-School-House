@@ -52,6 +52,10 @@ export class MapPageComponent {
 		this.map = map;
 
 		map.on("pm:remove", (event: any) => {
+			if (event.shape != "Marker") {
+				return;
+			}
+
 			let key = event.layer.options.icon.options.iconUrl;
 			let value = this.signStorage.get(key);
 			if (value.count > 1) {
@@ -62,6 +66,10 @@ export class MapPageComponent {
 		});
 
 		map.on("pm:create", (event: any) => {
+			if (event.shape != "Marker") {
+				return;
+			}
+
 			let key = event.layer.options.icon.options.iconUrl;
 			let value = this.signStorage.get(key);
 			if (value) {
