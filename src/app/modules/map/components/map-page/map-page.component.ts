@@ -9,6 +9,7 @@ import {
 } from "leaflet";
 import {
 	attributionControl,
+	bigImageControl,
 	geomanGlobalOptions,
 	geomanToolbarOptions,
 	mapOptions,
@@ -55,10 +56,10 @@ export class MapPageComponent implements OnDestroy {
 			closeButton: true,
 			container: "sidebar"
 		}).addTo(map);
+		map.addControl(bigImageControl);
 
 		map.pm.Toolbar.copyDrawControl("Polyline", routeControlOptions);
 		map.pm.setGlobalOptions(geomanGlobalOptions);
-
 		map.on("pm:create", event => this.pmCreate(event));
 		map.on("pm:remove", event => this.pmRemove(event));
 

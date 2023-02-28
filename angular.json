@@ -32,6 +32,7 @@
               "./node_modules/leaflet/dist/leaflet.css",
               "@geoman-io/leaflet-geoman-free/dist/leaflet-geoman.css",
               "leaflet-sidebar-v2/css/leaflet-sidebar.min.css",
+              "./node_modules/leaflet.bigimage/dist/Leaflet.BigImage.min.css",
               "src/styles.scss"
             ],
             "scripts": []
