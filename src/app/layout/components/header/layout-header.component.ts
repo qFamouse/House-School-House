@@ -6,6 +6,7 @@ import { Component, OnInit } from "@angular/core";
 	styleUrls: ["./layout-header.component.scss"]
 })
 export class LayoutHeaderComponent implements OnInit {
+	showMobile: boolean;
 	constructor() {}
 
 	ngOnInit(): void {}
