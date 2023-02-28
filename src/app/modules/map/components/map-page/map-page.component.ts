@@ -1,5 +1,5 @@
 /// <reference types='leaflet-sidebar-v2' />
-import { Component } from "@angular/core";
+import { Component, OnDestroy } from "@angular/core";
 import {
 	Map as LeafletMap,
 	MapOptions,
@@ -21,17 +21,22 @@ import { MatIconRegistry } from "@angular/material/icon";
 import { DomSanitizer } from "@angular/platform-browser";
 import { Sign } from "../../../../shared/models/sign";
 import { signs } from "../../configuration/signs";
+import { SignStorageService } from "../../../../shared/services/sign-storage.service";
 
 @Component({
 	selector: "app-map-page",
 	templateUrl: "./map-page.component.html",
 	styleUrls: ["./map-page.component.scss"]
 })
-export class MapPageComponent {
+export class MapPageComponent implements OnDestroy {
 	map!: LeafletMap;
 	mapOptions: MapOptions = mapOptions;
 	signs: Sign[] = signs;
-	constructor(matIconRegistry: MatIconRegistry, domSanitizer: DomSanitizer) {
+	constructor(
+		matIconRegistry: MatIconRegistry,
+		domSanitizer: DomSanitizer,
+		public signStorageService: SignStorageService
+	) {
 		matIconRegistry.addSvgIcon(
 			"github",
 			domSanitizer.bypassSecurityTrustResourceUrl("assets/github.svg")
@@ -54,49 +59,11 @@ export class MapPageComponent {
 		map.pm.Toolbar.copyDrawControl("Polyline", routeControlOptions);
 		map.pm.setGlobalOptions(geomanGlobalOptions);
 
+		map.on("pm:create", event => this.pmCreate(event));
+		map.on("pm:remove", event => this.pmRemove(event));
+
 		this.map = map;
-
-		map.on("pm:remove", (event: any) => {
-			if (event.shape != "Marker") {
-				return;
-			}
-
-			let key = event.layer.options.icon.options.iconUrl;
-			let value = this.signStorage.get(key);
-			if (value.count > 1) {
-				value.count--;
-			} else {
-				this.signStorage.delete(key);
-			}
-		});
-
-		map.on("pm:create", (event: any) => {
-			if (event.shape != "Marker") {
-				return;
-			}
-
-			let key = event.layer.options.icon.options.iconUrl;
-			let value = this.signStorage.get(key);
-			if (value) {
-				value.count++;
-			} else {
-				this.signStorage.set(key, {
-					count: 1,
-					title: event.layer.options.title
-				});
-			}
-
-			console.log(this.signStorage);
-		});
 	}
-
-	signStorage = new Map<
-		string,
-		{
-			count: number;
-			title: string;
-		}
-	>();
 
 	drawSign(iconUrl: string, title: string) {
 		this.map.pm.enableDraw("Marker", {
@@ -110,5 +77,26 @@ export class MapPageComponent {
 			},
 			continueDrawing: false
 		});
+	}
+
+	pmCreate(event: any) {
+		if (event.shape != "Marker") {
+			return;
+		}
+		let key = event.layer.options.icon.options.iconUrl;
+		let title = event.layer.options.title;
+		this.signStorageService.add(key, title);
+	}
+
+	pmRemove(event: any) {
+		if (event.shape != "Marker") {
+			return;
+		}
+		let key = event.layer.options.icon.options.iconUrl;
+		this.signStorageService.remove(key);
+	}
+
+	ngOnDestroy(): void {
+		this.signStorageService.clear();
 	}
 }

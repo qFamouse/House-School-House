@@ -1,12 +1,9 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-
+import { NgModule } from "@angular/core";
+import { CommonModule, KeyValuePipe } from "@angular/common";
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+	declarations: [],
+	imports: [CommonModule],
+	providers: [KeyValuePipe]
 })
-export class SharedModule { }
+export class SharedModule {}

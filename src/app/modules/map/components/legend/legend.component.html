@@ -1,7 +1,7 @@
 <section class="legend">
   <table class="legend__table">
     <tbody>
-    <tr *ngFor="let item of storage | keyvalue">
+    <tr *ngFor="let item of this.signStorageService.keyvalue()">
       <td class="legend__td legend__image-container legend__td_middle">
         <img class="legend__image" [src]="item.key" alt="маркер">
       </td>

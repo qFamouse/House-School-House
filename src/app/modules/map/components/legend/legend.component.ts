@@ -1,4 +1,5 @@
-import { Component, Input } from "@angular/core";
+import { Component } from "@angular/core";
+import { SignStorageService } from "../../../../shared/services/sign-storage.service";
 
 @Component({
 	selector: "app-legend",
@@ -6,13 +7,5 @@ import { Component, Input } from "@angular/core";
 	styleUrls: ["./legend.component.scss"]
 })
 export class LegendComponent {
-	@Input() storage: Map<
-		string,
-		{
-			count: number;
-			title: string;
-		}
-	>;
-
-	constructor() {}
+	constructor(public signStorageService: SignStorageService) {}
 }
