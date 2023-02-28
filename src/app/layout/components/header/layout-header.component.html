@@ -2,7 +2,7 @@
     <nav class="navbar">
         <mat-icon class="navbar__burger-menu" fontIcon="menu" (click)="showMobile = !showMobile"></mat-icon>
         <img class="navbar__logotype" src="assets/logotype.png" alt="logotype">
-        <span class="navbar__title">Дом-Школа-Дом</span>
+        <span class="navbar__title" [routerLink]="'map'">Дом-Школа-Дом</span>
 
         <div [ngClass]="{navbar__pages_mobile:showMobile}" (click)="showMobile = !showMobile" class="navbar__pages">
             <button class="navbar__page" mat-button [routerLink]="'map'">Карта</button>
