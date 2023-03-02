@@ -4,30 +4,46 @@
 ></div>
 
 <div id="sidebar" class="leaflet-sidebar collapsed">
-    <div class="leaflet-sidebar-tabs">
-        <ul role="tablist">
-            <li>
-                <a href="#markers" role="tab"><mat-icon>place</mat-icon></a>
-            </li>
-          <li>
-            <a href="#legend" role="tab"><mat-icon>streetview</mat-icon></a>
-          </li>
-        </ul>
+  <div class="leaflet-sidebar-tabs">
+    <ul role="tablist">
+      <li>
+        <a href="#favourite-markers" role="tab"><mat-icon>grade</mat-icon></a>
+      </li>
 
-        <ul role="tablist">
-            <li>
-                <a target="_blank" href="https://github.com/qFamouse/House-School-House" role="tab"><mat-icon svgIcon="github"></mat-icon></a>
-            </li>
-        </ul>
-    </div>
+      <li>
+        <a href="#all-markers" role="tab"><mat-icon>add_location</mat-icon></a>
+      </li>
+      <li>
+        <a href="#legend" role="tab"><mat-icon>map</mat-icon></a>
+      </li>
+    </ul>
+
+    <ul role="tablist">
+      <li>
+        <a target="_blank" href="https://github.com/qFamouse/House-School-House" role="tab"><mat-icon svgIcon="github"></mat-icon></a>
+      </li>
+    </ul>
+  </div>
 
     <div class="leaflet-sidebar-content">
 
-      <div class="leaflet-sidebar-pane" id="markers">
+      <div class="leaflet-sidebar-pane" id="favourite-markers">
         <div class="custom-sidebar-pane-wrapper">
           <div>
             <div class="leaflet-sidebar-close"><mat-icon>keyboard_arrow_right</mat-icon></div>
-            <h1 class="leaflet-sidebar-header">Конструктор</h1>
+            <h1 class="leaflet-sidebar-header">Избранное</h1>
+          </div>
+          <div class="custom-leaflet-sidebar-content">
+            SOON
+          </div>
+        </div>
+      </div>
+
+      <div class="leaflet-sidebar-pane" id="all-markers">
+        <div class="custom-sidebar-pane-wrapper">
+          <div>
+            <div class="leaflet-sidebar-close"><mat-icon>keyboard_arrow_right</mat-icon></div>
+            <h1 class="leaflet-sidebar-header">Полный список</h1>
           </div>
           <div class="custom-leaflet-sidebar-content">
             <app-marker *ngFor="let sign of signs"
