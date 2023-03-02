@@ -24,6 +24,7 @@
     "@geoman-io/leaflet-geoman-free": "^2.14.2",
     "docxtemplater": "^3.34.1",
     "file-saver": "^2.0.5",
+    "html2canvas": "^1.4.1",
     "leaflet": "^1.9.3",
     "leaflet-sidebar-v2": "^3.2.3",
     "leaflet.bigimage": "^1.0.1",

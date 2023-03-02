@@ -22,6 +22,7 @@
     </div>
 
     <div class="leaflet-sidebar-content">
+
       <div class="leaflet-sidebar-pane" id="markers">
         <div class="custom-sidebar-pane-wrapper">
           <div>
@@ -39,6 +40,7 @@
           </div>
         </div>
       </div>
+
       <div class="leaflet-sidebar-pane" id="legend">
         <div class="custom-sidebar-pane-wrapper">
           <div>
@@ -46,9 +48,16 @@
             <h1 class="leaflet-sidebar-header">Легенда</h1>
           </div>
           <div class="custom-leaflet-sidebar-content">
-            <app-legend></app-legend>
+            <app-legend #legendRef></app-legend>
+          </div>
+          <div>
+            <button class="download-button" mat-raised-button (click)="legend2image()">
+              <mat-icon>cloud_download</mat-icon>
+              Скачать
+            </button>
           </div>
         </div>
       </div>
+
     </div>
 </div>

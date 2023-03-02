@@ -1,5 +1,5 @@
 /// <reference types='leaflet-sidebar-v2' />
-import { Component, OnDestroy } from "@angular/core";
+import { Component, ElementRef, OnDestroy, ViewChild } from "@angular/core";
 import {
 	Map as LeafletMap,
 	MapOptions,
@@ -23,6 +23,8 @@ import { DomSanitizer } from "@angular/platform-browser";
 import { Sign } from "../../../../shared/models/sign";
 import { signs } from "../../configuration/signs";
 import { SignStorageService } from "../../../../shared/services/sign-storage.service";
+import html2canvas from "html2canvas";
+import { saveAs } from "file-saver";
 
 @Component({
 	selector: "app-map-page",
@@ -30,6 +32,9 @@ import { SignStorageService } from "../../../../shared/services/sign-storage.ser
 	styleUrls: ["./map-page.component.scss"]
 })
 export class MapPageComponent implements OnDestroy {
+	@ViewChild("legendRef", { read: ElementRef })
+	public legendRef: ElementRef<HTMLDivElement>;
+
 	map!: LeafletMap;
 	mapOptions: MapOptions = mapOptions;
 	signs: Sign[] = signs;
@@ -99,5 +104,14 @@ export class MapPageComponent implements OnDestroy {
 
 	ngOnDestroy(): void {
 		this.signStorageService.clear();
+	}
+
+	legend2image() {
+		html2canvas(this.legendRef.nativeElement, {
+			useCORS: true
+		}).then(canvas => {
+			const img = canvas.toDataURL("image/png");
+			saveAs(img, "legend.png");
+		});
 	}
 }
