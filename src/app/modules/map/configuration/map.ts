@@ -11,6 +11,7 @@ import { LeafletControlLayersConfig } from "@asymmetrik/ngx-leaflet";
 import "@geoman-io/leaflet-geoman-free";
 import "node_modules/leaflet-sidebar-v2/js/leaflet-sidebar.min.js";
 import "leaflet.bigimage";
+import "leaflet.locatecontrol";
 
 let defaultTileLayer = tileLayer(
 	"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
@@ -169,4 +170,13 @@ export let bigImageControl = new Control.BigImage({
 	minScale: 1,
 	inputTitle: "Масштаб",
 	downloadTitle: "Скачать"
+});
+
+export let locateControl = new Control.Locate({
+	drawCircle: false,
+	initialZoomLevel: 16,
+	strings: {
+		title: "Моё местоположение",
+		popup: undefined
+	}
 });

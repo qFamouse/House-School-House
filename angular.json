@@ -33,6 +33,7 @@
               "@geoman-io/leaflet-geoman-free/dist/leaflet-geoman.css",
               "leaflet-sidebar-v2/css/leaflet-sidebar.min.css",
               "./node_modules/leaflet.bigimage/dist/Leaflet.BigImage.min.css",
+              "./node_modules/leaflet.locatecontrol/dist/L.Control.Locate.css",
               "src/styles.scss"
             ],
             "scripts": []

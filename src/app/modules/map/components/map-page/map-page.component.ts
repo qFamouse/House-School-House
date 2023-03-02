@@ -8,6 +8,7 @@ import {
 	geomanToolbarOptions,
 	leafletControlLayersConfig,
 	leafletLayersControlOptions,
+	locateControl,
 	mapOptions,
 	routeControlOptions,
 	sidebarControl,
@@ -60,6 +61,7 @@ export class MapPageComponent implements OnDestroy {
 			container: "sidebar"
 		}).addTo(map);
 		map.addControl(bigImageControl);
+		map.addControl(locateControl);
 
 		map.pm.Toolbar.copyDrawControl("Polyline", routeControlOptions);
 		map.pm.setGlobalOptions(geomanGlobalOptions);
