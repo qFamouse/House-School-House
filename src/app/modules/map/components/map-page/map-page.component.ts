@@ -1,17 +1,13 @@
 /// <reference types='leaflet-sidebar-v2' />
 import { Component, ElementRef, OnDestroy, ViewChild } from "@angular/core";
-import {
-	Map as LeafletMap,
-	MapOptions,
-	Icon,
-	IconOptions,
-	Control
-} from "leaflet";
+import { Map as LeafletMap, Icon, IconOptions, Control } from "leaflet";
 import {
 	attributionControl,
 	bigImageControl,
 	geomanGlobalOptions,
 	geomanToolbarOptions,
+	leafletControlLayersConfig,
+	leafletLayersControlOptions,
 	mapOptions,
 	routeControlOptions,
 	sidebarControl,
@@ -36,7 +32,9 @@ export class MapPageComponent implements OnDestroy {
 	public legendRef: ElementRef<HTMLDivElement>;
 
 	map!: LeafletMap;
-	mapOptions: MapOptions = mapOptions;
+	mapOptions = mapOptions;
+	leafletControlLayersConfig = leafletControlLayersConfig;
+	leafletLayersControlOptions = leafletLayersControlOptions;
 	signs: Sign[] = signs;
 	constructor(
 		matIconRegistry: MatIconRegistry,

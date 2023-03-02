@@ -1,6 +1,8 @@
 <div id="map" leaflet
      [leafletOptions]="mapOptions"
      (leafletMapReady)="onMapReady($event)"
+     [leafletLayersControl]="leafletControlLayersConfig"
+     [leafletLayersControlOptions]="leafletLayersControlOptions"
 ></div>
 
 <div id="sidebar" class="leaflet-sidebar collapsed">
@@ -13,6 +15,7 @@
       <li>
         <a href="#all-markers" role="tab"><mat-icon>add_location</mat-icon></a>
       </li>
+
       <li>
         <a href="#legend" role="tab"><mat-icon>map</mat-icon></a>
       </li>
