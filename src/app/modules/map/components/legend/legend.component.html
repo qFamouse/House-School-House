@@ -1,12 +1,11 @@
 <section class="legend">
-  <table class="legend__table">
-    <tbody>
-    <tr *ngFor="let item of this.signStorageService.keyvalue()">
-      <td class="legend__td legend__image-container legend__td_middle">
-        <img class="legend__image" [src]="item.key" alt="маркер">
-      </td>
-      <td class="legend__td legend__title">{{item.value.title}}</td>
-    </tr>
-    </tbody>
-  </table>
+  <div class="legend__row">
+    <img class="legend__image" src="assets/route.svg" alt="route">
+    <td class="legend__title">Направление движения детей</td>
+  </div>
+
+  <div *ngFor="let item of this.signStorageService.keyvalue()" class="legend__row">
+    <img class="legend__image" [src]="item.key" alt="маркер">
+    <td class="legend__title">{{item.value.title}}</td>
+  </div>
 </section>

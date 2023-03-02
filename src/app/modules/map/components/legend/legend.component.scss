@@ -1,29 +1,22 @@
 .legend {
   padding: 1em;
 
-  &__table {
-    border-collapse: separate;
-    border-spacing: 0 1em;
-  }
+  &__row {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 5px;
 
-  &__td {
-    &_middle {
-      margin: auto;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-  }
-
-  &__image-container {
-    width: 60px;
+    margin-bottom: 5px;
   }
 
   &__image {
-    width: 80%;
+    width: 70%;
+    justify-self: center;
+    align-self: center;
   }
 
   &__title {
-    width: 150px;
+    justify-self: start;
+    align-self: center;
   }
 }
