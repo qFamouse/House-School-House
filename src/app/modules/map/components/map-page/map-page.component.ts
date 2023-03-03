@@ -65,6 +65,7 @@ export class MapPageComponent implements OnDestroy {
 
 		map.pm.Toolbar.copyDrawControl("Polyline", routeControlOptions);
 		map.pm.setGlobalOptions(geomanGlobalOptions);
+		map.pm.setLang("ru");
 		map.on("pm:create", event => this.pmCreate(event));
 		map.on("pm:remove", event => this.pmRemove(event));
 
