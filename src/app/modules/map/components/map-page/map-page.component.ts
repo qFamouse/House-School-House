@@ -1,27 +1,25 @@
 /// <reference types='leaflet-sidebar-v2' />
 import { Component, ElementRef, OnDestroy, ViewChild } from "@angular/core";
-import { Map as LeafletMap, Icon, IconOptions, Control } from "leaflet";
-import {
-	attributionControl,
-	bigImageControl,
-	geomanGlobalOptions,
-	geomanToolbarOptions,
-	leafletControlLayersConfig,
-	leafletLayersControlOptions,
-	locateControl,
-	mapOptions,
-	routeControlOptions,
-	sidebarControl,
-	zoomControl
-} from "../../configuration/map";
+import { Map as LeafletMap, Icon, IconOptions, Control, map } from "leaflet";
 import "@geoman-io/leaflet-geoman-free";
 import { MatIconRegistry } from "@angular/material/icon";
 import { DomSanitizer } from "@angular/platform-browser";
 import { Sign } from "../../../../shared/models/sign";
-import { signs } from "../../configuration/signs";
 import { SignStorageService } from "../../../../shared/services/sign-storage.service";
 import html2canvas from "html2canvas";
 import { saveAs } from "file-saver";
+import {
+	mapOptions,
+	controlLayersConfig,
+	layersControlOptions,
+	zoomControl,
+	attributionControl
+} from "../../configuration";
+import { routeControlOptions } from "../../configuration";
+import { geomanGlobalOptions, geomanToolbarOptions } from "../../configuration";
+import { appSignsConfiguration } from "../../configuration";
+import { locateControl } from "../../configuration";
+import { bigImageControl } from "../../configuration";
 
 @Component({
 	selector: "app-map-page",
@@ -34,9 +32,9 @@ export class MapPageComponent implements OnDestroy {
 
 	map!: LeafletMap;
 	mapOptions = mapOptions;
-	leafletControlLayersConfig = leafletControlLayersConfig;
-	leafletLayersControlOptions = leafletLayersControlOptions;
-	signs: Sign[] = signs;
+	controlLayersConfig = controlLayersConfig;
+	layersControlOptions = layersControlOptions;
+	signs: Sign[] = appSignsConfiguration;
 	constructor(
 		matIconRegistry: MatIconRegistry,
 		domSanitizer: DomSanitizer,
