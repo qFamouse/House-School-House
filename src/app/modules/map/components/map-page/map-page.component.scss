@@ -7,6 +7,10 @@
   height: 100%;
 }
 
+.leaflet-sidebar {
+  z-index: 1001; // decrease default z-index, because sidebar was in front of opened burger menu
+}
+
 .leaflet-sidebar-pane {
   padding: unset;
 }
