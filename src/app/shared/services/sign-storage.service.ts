@@ -40,7 +40,6 @@ export class SignStorageService {
 	}
 
 	public clear() {
-		console.log("sign storage - clear");
 		this.storage.clear();
 	}
 }
