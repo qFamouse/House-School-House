@@ -116,6 +116,7 @@ export enum PassportVariables {
 	bus_owner__phone_of_responsible_person = "bus_owner__phone_of_responsible_person"
 }
 
+// AUTO-GEN BY IDE
 export class PassportTemplate implements PassportTemplateType {
 	the_presence_of_the_yid_squad: string;
 	head_of_the_yid_squad__job_title: string;
