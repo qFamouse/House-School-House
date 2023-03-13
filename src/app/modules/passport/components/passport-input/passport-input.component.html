@@ -1,6 +1,7 @@
 <mat-form-field [formGroup]="psFormGroup" class="mat-form-field">
   <mat-label>{{psLabel}}</mat-label>
-  <input matInput [formControlName]="psFormControlName" required>
+  <input matInput [formControlName]="psFormControlName" [(ngModel)]="value">
+
   <mat-error *ngIf="abstractControl?.hasError('required')">
     Обязательно к заполнению
   </mat-error>
@@ -8,6 +9,7 @@
   <mat-error *ngIf="abstractControl?.hasError('minlength')">
     Минимальная длинна {{abstractControl?.getError('minlength').requiredLength}}
   </mat-error>
+
   <mat-error *ngIf="abstractControl?.hasError('maxlength')">
     Максимальная длинна {{abstractControl?.getError('maxlength').requiredLength}}
   </mat-error>
