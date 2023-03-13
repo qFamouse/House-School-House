@@ -11,6 +11,7 @@ import { titularConfig } from "../../configuration/passport-configs/titular-conf
 import { vehicleConfig } from "../../configuration/passport-configs/vehicle-config";
 import { generalConfig } from "../../configuration/passport-configs/general-config";
 import { PassportTemplateModel } from "../../models/passport-template.model";
+import { PassportConfigurationModel } from "../../models/passport-configuration.model";
 
 @Component({
 	selector: "app-passport-page",
@@ -30,7 +31,25 @@ export class PassportPageComponent {
 			const zip = new PizZip(content);
 			const doc = new Docxtemplater(zip, {});
 
-			doc.setData(this.passport);
+			let docPassport = new PassportTemplateModel();
+
+			function tryToFind(key): PassportConfigurationModel {
+				return titularConfig[key] || generalConfig[key] || vehicleConfig[key];
+			}
+			for (let key in this.passport) {
+				let title: string = this.passport[key] || "";
+
+				let freeLength = tryToFind(key)?.maxLength - title.length;
+				console.log(freeLength);
+				if (freeLength > 0) {
+					let subLength = Math.floor(freeLength / 2);
+					title = `${"_".repeat(subLength)}${title}${"_".repeat(subLength)}`;
+				}
+
+				docPassport[key] = title;
+			}
+
+			doc.setData(docPassport);
 			doc.render();
 
 			const out = doc.getZip().generate({
