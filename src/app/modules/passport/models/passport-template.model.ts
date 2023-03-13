@@ -48,23 +48,23 @@ export enum PassportVariables {
 
 	// Время занятий в учреждении образования
 	class_time_1st_shift__start_hour = "class_time_1st_shift__start_hour",
-	class_time_1st_shift__end_hour = "class_time_1st_shift__end_hour",
 	class_time_1st_shift__start_minute = "class_time_1st_shift__start_minute",
+	class_time_1st_shift__end_hour = "class_time_1st_shift__end_hour",
 	class_time_1st_shift__end_minute = "class_time_1st_shift__end_minute",
 
 	class_time_2nd_shift__start_hour = "class_time_2nd_shift__start_hour",
-	class_time_2nd_shift__end_hour = "class_time_2nd_shift__end_hour",
 	class_time_2nd_shift__start_minute = "class_time_2nd_shift__start_minute",
+	class_time_2nd_shift__end_hour = "class_time_2nd_shift__end_hour",
 	class_time_2nd_shift__end_minute = "class_time_2nd_shift__end_minute",
 
 	time_extracurricular_activities__start_hour = "time_extracurricular_activities__start_hour",
-	time_extracurricular_activities__end_hour = "time_extracurricular_activities__end_hour",
 	time_extracurricular_activities__start_minute = "time_extracurricular_activities__start_minute",
+	time_extracurricular_activities__end_hour = "time_extracurricular_activities__end_hour",
 	time_extracurricular_activities__end_minute = "time_extracurricular_activities__end_minute",
 
 	working_hours_on_the_sixth_school_day__start_hour = "working_hours_on_the_sixth_school_day__start_hour",
-	working_hours_on_the_sixth_school_day__end_hour = "working_hours_on_the_sixth_school_day__end_hour",
 	working_hours_on_the_sixth_school_day__start_minute = "working_hours_on_the_sixth_school_day__start_minute",
+	working_hours_on_the_sixth_school_day__end_hour = "working_hours_on_the_sixth_school_day__end_hour",
 	working_hours_on_the_sixth_school_day__end_minute = "working_hours_on_the_sixth_school_day__end_minute",
 
 	// Информация об обеспечении безопасности перевозок детей специальным транспортным средством (автобусом).
