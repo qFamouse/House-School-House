@@ -1,16 +1,17 @@
 import { Component } from "@angular/core";
-import { FormBuilder, Validators } from "@angular/forms";
+import { FormBuilder, FormGroup, ValidatorFn, Validators } from "@angular/forms";
 import { map, Observable } from "rxjs";
 import { StepperOrientation } from "@angular/material/stepper";
 import { BreakpointObserver } from "@angular/cdk/layout";
-import {
-	PassportTemplate,
-	PassportVariables
-} from "../../models/passport-template.model";
 import PizZipUtils from "pizzip/utils";
 import Docxtemplater from "docxtemplater";
 import { saveAs } from "file-saver";
 import * as PizZip from "pizzip";
+import { titularConfig } from "../../configuration/passport-configs/titular-config";
+import { vehicleConfig } from "../../configuration/passport-configs/vehicle-config";
+import { generalConfig } from "../../configuration/passport-configs/general-config";
+import { PassportTemplateModel } from "../../models/passport-template.model";
+import { PassportConfigurationModel } from "../../models/passport-configuration.model";
 
 @Component({
 	selector: "app-passport-page",
@@ -18,48 +19,96 @@ import * as PizZip from "pizzip";
 	styleUrls: ["./passport-page.component.scss"]
 })
 export class PassportPageComponent {
-	passportVariables = PassportVariables;
-	passportTemplate = new PassportTemplate();
+	passport = new PassportTemplateModel();
 
 	stepperOrientation: Observable<StepperOrientation>;
-	constructor(
-		private formBuilder: FormBuilder,
-		breakpointObserver: BreakpointObserver
-	) {
+	generate() {
+		PizZipUtils.getBinaryContent("/assets/passport-template.docx", (error: Error | null, content: string) => {
+			if (error) {
+				throw error;
+			}
+
+			const zip = new PizZip(content);
+			const doc = new Docxtemplater(zip, {});
+
+			let docPassport = new PassportTemplateModel();
+
+			function tryToFind(key): PassportConfigurationModel {
+				return titularConfig[key] || generalConfig[key] || vehicleConfig[key];
+			}
+			for (let key in this.passport) {
+				let title: string = this.passport[key] || "";
+
+				let freeLength = tryToFind(key)?.maxLength - title.length;
+				console.log(freeLength);
+				if (freeLength > 0) {
+					let subLength = Math.floor(freeLength / 2);
+					title = `${"_".repeat(subLength)}${title}${"_".repeat(subLength)}`;
+				}
+
+				docPassport[key] = title;
+			}
+
+			doc.setData(docPassport);
+			doc.render();
+
+			const out = doc.getZip().generate({
+				type: "blob",
+				mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+			});
+
+			saveAs(out, "passport.docx");
+		});
+	}
+
+	titularFormGroup: FormGroup;
+	generalFormGroup: FormGroup;
+	vehicleFormGroup: FormGroup;
+
+	unsorted() {
+		return 0;
+	}
+
+	titularConfig = titularConfig;
+	generalConfig = generalConfig;
+	vehicleConfig = vehicleConfig;
+
+	constructor(private formBuilder: FormBuilder, breakpointObserver: BreakpointObserver) {
 		this.stepperOrientation = breakpointObserver
 			.observe("(min-width: 800px)")
 			.pipe(map(({ matches }) => (matches ? "horizontal" : "vertical")));
+
+		this.titularFormGroup = this.generateFormGroupByConfig(titularConfig);
+		this.generalFormGroup = this.generateFormGroupByConfig(generalConfig);
+		this.vehicleFormGroup = this.generateFormGroupByConfig(vehicleConfig);
 	}
 
-	generate() {
-		PizZipUtils.getBinaryContent(
-			"/assets/passport-template.docx",
-			(error: Error | null, content: string) => {
-				if (error) {
-					throw error;
-				}
+	generateFormGroupByConfig(config: object) {
+		let controls: object = {};
 
-				const zip = new PizZip(content);
-				const doc = new Docxtemplater(zip, {});
+		for (const key in config) {
+			const item = config[key];
 
-				doc.setData(this.passportTemplate);
-				doc.render();
+			let control: (string | ValidatorFn | ValidatorFn[])[] = [""];
+			let validators: ValidatorFn | ValidatorFn[] = [];
 
-				const out = doc.getZip().generate({
-					type: "blob",
-					mimeType:
-						"application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-				});
-
-				saveAs(out, "passport.docx");
+			if (item.required) {
+				validators.push(Validators.required);
 			}
-		);
-	}
 
-	titularFormGroup = this.formBuilder.group({
-		[PassportVariables.name_of_the_educational_institution]: [
-			"",
-			Validators.required
-		]
-	});
+			if (item.maxLength) {
+				validators.push(Validators.maxLength(item.maxLength));
+			}
+
+			if (item.minLength) {
+				validators.push(Validators.minLength(item.minLength));
+			}
+
+			control.push(validators);
+
+			controls[key] = control;
+		}
+
+		return this.formBuilder.group(controls);
+	}
 }

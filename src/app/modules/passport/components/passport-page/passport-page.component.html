@@ -1,12 +1,61 @@
 <mat-stepper [orientation]="(stepperOrientation | async)!">
-    <mat-step [stepControl]="titularFormGroup" label="Титульный лист">
+<!--  Титульный лист -->
+  <mat-step [stepControl]="titularFormGroup" label="Титульный лист">
+    <div *ngFor="let item of titularConfig | keyvalue: unsorted">
+
+      <h1 *ngIf="item.value.title">{{item.value.title}}</h1>
+
       <app-passport-input
-              [psFormGroup]="titularFormGroup"
-              [psLabel]="'Наименование учреждения образования'"
-              [psFormControlName]="passportVariables.name_of_the_educational_institution"
-              [abstractControl]="titularFormGroup.controls[passportVariables.name_of_the_educational_institution]"
+        [psFormGroup]="titularFormGroup"
+        [psLabel]="item.value?.text"
+        [psFormControlName]="item.key"
+        [abstractControl]="titularFormGroup.controls[item.key]"
+        [(value)]="passport[item.key]"
       ></app-passport-input>
-    </mat-step>
+    </div>
+
+    <button mat-button matStepperNext>Далее</button>
+  </mat-step>
+
+<!--  Общие сведения -->
+  <mat-step [stepControl]="generalFormGroup" label="Общие сведения">
+    <div *ngFor="let item of generalConfig | keyvalue: unsorted">
+      <h1 *ngIf="item.value.title">{{item.value.title}}</h1>
+
+
+      <app-passport-input
+
+        [psFormGroup]="generalFormGroup"
+        [psLabel]="item.value?.text"
+        [psFormControlName]="item.key"
+        [abstractControl]="generalFormGroup.controls[item.key]"
+        [(value)]="passport[item.key]"
+      ></app-passport-input>
+    </div>
+
+
+    <button mat-button matStepperPrevious>Назад</button>
+    <button mat-button matStepperNext>Далее</button>
+  </mat-step>
+
+<!--  Школьный автобус -->
+  <mat-step [stepControl]="vehicleFormGroup" label="Школьный автобус">
+    <app-passport-input
+      *ngFor="let item of vehicleConfig | keyvalue: unsorted"
+      [psFormGroup]="vehicleFormGroup"
+      [psLabel]="item.value?.text"
+      [psFormControlName]="item.key"
+      [abstractControl]="vehicleFormGroup.controls[item.key]"
+      [(value)]="passport[item.key]"
+    ></app-passport-input>
+    <button mat-button matStepperPrevious>Назад</button>
+    <button mat-button matStepperNext>Далее</button>
+  </mat-step>
+
+<!--  Генерация -->
+  <mat-step label="Генерация">
+    <button mat-button (click)="generate()">Сгенерировать</button>
+    <button mat-button matStepperPrevious>Назад</button>
+  </mat-step>
 </mat-stepper>
 
-<button mat-button (click)="generate()">Generate</button>

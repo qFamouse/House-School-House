@@ -1,122 +1,13 @@
+import { TitularVariables } from "../configuration/passport-variables/titular-variables";
+import { GeneralVariables } from "../configuration/passport-variables/general-variables";
+import { VehicleVariables } from "../configuration/passport-variables/vehicle-variables";
+
 type PassportTemplateType = {
-	[variable in PassportVariables]: string;
+	[variable in TitularVariables | GeneralVariables | VehicleVariables]: string;
 };
 
-export enum PassportVariables {
-	name_of_the_educational_institution = "name_of_the_educational_institution",
-	the_last_two_digits_of_the_year = "the_last_two_digits_of_the_year",
-	full_name_of_the_educational_institution = "full_name_of_the_educational_institution",
-	type_of_educational_institution = "type_of_educational_institution",
-	legal_address = "legal_address",
-	actual_address = "actual_address",
-	director_manager__full_name = "director_manager__full_name",
-	director_manager__phone = "director_manager__phone",
-	deputy_director_for_academic_affairs__full_name = "deputy_director_for_academic_affairs__full_name",
-	deputy_director_for_academic_affairs__phone = "deputy_director_for_academic_affairs__phone",
-	deputy_director_for_educational_work__full_name = "deputy_director_for_educational_work__full_name",
-	deputy_director_for_educational_work__phone = "deputy_director_for_educational_work__phone",
-	responsible_employees_for_measures_to_prevent_child_injuries__first__job_title = "responsible_employees_for_measures_to_prevent_child_injuries__first__job_title",
-	responsible_employees_for_measures_to_prevent_child_injuries__first__full_name = "responsible_employees_for_measures_to_prevent_child_injuries__first__full_name",
-	responsible_employees_for_measures_to_prevent_child_injuries__first__phone = "responsible_employees_for_measures_to_prevent_child_injuries__first__phone",
-	responsible_employees_for_measures_to_prevent_child_injuries__second__job_title = "responsible_employees_for_measures_to_prevent_child_injuries__second__job_title",
-	responsible_employees_for_measures_to_prevent_child_injuries__second__full_name = "responsible_employees_for_measures_to_prevent_child_injuries__second__full_name",
-	responsible_employees_for_measures_to_prevent_child_injuries__second__phone = "responsible_employees_for_measures_to_prevent_child_injuries__second__phone",
-
-	responsible_from_the_department_of_internal_affairs__first__job_title = "responsible_from_the_department_of_internal_affairs__first__job_title",
-	responsible_from_the_department_of_internal_affairs__first__full_name = "responsible_from_the_department_of_internal_affairs__first__full_name",
-	responsible_from_the_department_of_internal_affairs__second__job_title = "responsible_from_the_department_of_internal_affairs__second__job_title",
-	responsible_from_the_department_of_internal_affairs__second__full_name = "responsible_from_the_department_of_internal_affairs__second__full_name",
-	responsible_from_the_department_of_internal_affairs__phones = "responsible_from_the_department_of_internal_affairs__phones",
-
-	the_head_or_responsible_employee_of_the_road_maintenance_organization_that_carries_out_the_maintenance_of_the_road_network__full_name = "the_head_or_responsible_employee_of_the_road_maintenance_organization_that_carries_out_the_maintenance_of_the_road_network__full_name",
-	the_head_or_responsible_employee_of_the_road_maintenance_organization_that_carries_out_the_maintenance_of_the_road_network__phone = "the_head_or_responsible_employee_of_the_road_maintenance_organization_that_carries_out_the_maintenance_of_the_road_network__phone",
-
-	the_head_or_responsible_employee_of_a_road_maintenance_organization_that_carries_out_the_maintenance_of_technical_means_of_traffic_management__full_name = "the_head_or_responsible_employee_of_a_road_maintenance_organization_that_carries_out_the_maintenance_of_technical_means_of_traffic_management__full_name",
-	the_head_or_responsible_employee_of_a_road_maintenance_organization_that_carries_out_the_maintenance_of_technical_means_of_traffic_management__phone = "the_head_or_responsible_employee_of_a_road_maintenance_organization_that_carries_out_the_maintenance_of_technical_means_of_traffic_management__phone",
-
-	number_of_students_students_pupils = "number_of_students_students_pupils",
-	availability_of_a_corner_for_bdd = "availability_of_a_corner_for_bdd",
-	availability_of_a_bdd_cabinet = "availability_of_a_bdd_cabinet",
-	availability_of_a_bdd_center = "availability_of_a_bdd_center",
-	the_presence_of_a_motor_city_or_a_parking_lot_according_to_the_bdd = "the_presence_of_a_motor_city_or_a_parking_lot_according_to_the_bdd",
-	the_presence_of_the_yid_squad = "the_presence_of_the_yid_squad",
-	head_of_the_yid_squad__job_title = "head_of_the_yid_squad__job_title",
-	head_of_the_yid_squad__full_name = "head_of_the_yid_squad__full_name",
-	head_of_the_yid_squad__phone = "head_of_the_yid_squad__phone",
-	the_presence_and_condition_of_the_fencing_of_the_territory_locking_devices_and_barriers = "the_presence_and_condition_of_the_fencing_of_the_territory_locking_devices_and_barriers",
-	availability_of_a_school_bus_in_an_educational_institution = "availability_of_a_school_bus_in_an_educational_institution",
-
-	// Время занятий в учреждении образования
-	class_time_1st_shift__start_hour = "class_time_1st_shift__start_hour",
-	class_time_1st_shift__end_hour = "class_time_1st_shift__end_hour",
-	class_time_1st_shift__start_minute = "class_time_1st_shift__start_minute",
-	class_time_1st_shift__end_minute = "class_time_1st_shift__end_minute",
-
-	class_time_2nd_shift__start_hour = "class_time_2nd_shift__start_hour",
-	class_time_2nd_shift__end_hour = "class_time_2nd_shift__end_hour",
-	class_time_2nd_shift__start_minute = "class_time_2nd_shift__start_minute",
-	class_time_2nd_shift__end_minute = "class_time_2nd_shift__end_minute",
-
-	time_extracurricular_activities__start_hour = "time_extracurricular_activities__start_hour",
-	time_extracurricular_activities__end_hour = "time_extracurricular_activities__end_hour",
-	time_extracurricular_activities__start_minute = "time_extracurricular_activities__start_minute",
-	time_extracurricular_activities__end_minute = "time_extracurricular_activities__end_minute",
-
-	working_hours_on_the_sixth_school_day__start_hour = "working_hours_on_the_sixth_school_day__start_hour",
-	working_hours_on_the_sixth_school_day__end_hour = "working_hours_on_the_sixth_school_day__end_hour",
-	working_hours_on_the_sixth_school_day__start_minute = "working_hours_on_the_sixth_school_day__start_minute",
-	working_hours_on_the_sixth_school_day__end_minute = "working_hours_on_the_sixth_school_day__end_minute",
-
-	// Информация об обеспечении безопасности перевозок детей специальным транспортным средством (автобусом).
-	// (при наличии автобуса)
-
-	// Общие сведения
-	brand = "brand",
-	model = "model",
-	registration_mark = "registration_mark",
-	year_of_release = "year_of_release",
-	number_of_passenger_seats = "number_of_passenger_seats",
-	compliance_of_the_design_with_the_requirements_for_school_buses = "compliance_of_the_design_with_the_requirements_for_school_buses",
-
-	// 2. Сведения о водителе(ях) автобуса(ов)
-	first_bus_driver__full_name = "first_bus_driver__full_name",
-	first_bus_driver__age = "first_bus_driver__age",
-	first_bus_driver__date_of_employment = "first_bus_driver__date_of_employment",
-	first_bus_driver__driving_experience_of_a_category_d_vehicle = "first_bus_driver__driving_experience_of_a_category_d_vehicle",
-	first_bus_driver__date_of_the_upcoming_medical_examination = "first_bus_driver__date_of_the_upcoming_medical_examination",
-	first_bus_driver__traffic_violations_committed = "first_bus_driver__traffic_violations_committed",
-
-	second_bus_driver__full_name = "second_bus_driver__full_name",
-	second_bus_driver__age = "second_bus_driver__age",
-	second_bus_driver__date_of_employment = "second_bus_driver__date_of_employment",
-	second_bus_driver__driving_experience_of_a_category_d_vehicle = "second_bus_driver__driving_experience_of_a_category_d_vehicle",
-	second_bus_driver__date_of_the_upcoming_medical_examination = "second_bus_driver__date_of_the_upcoming_medical_examination",
-	second_bus_driver__traffic_violations_committed = "second_bus_driver__traffic_violations_committed",
-
-	// 3. Организационно-техническое обеспечение
-	the_official_responsible_for_ensuring_road_safety_and_vehicle_operation__full_name = "the_official_responsible_for_ensuring_road_safety_and_vehicle_operation__full_name",
-	the_official_responsible_for_ensuring_road_safety_and_vehicle_operation__date_of_appointment = "the_official_responsible_for_ensuring_road_safety_and_vehicle_operation__date_of_appointment",
-
-	pre_trip_medical_examination__performs = "pre_trip_medical_examination__performs",
-	pre_trip_medical_examination__on_the_basis_of = "pre_trip_medical_examination__on_the_basis_of",
-	pre_trip_medical_examination__valid_until = "pre_trip_medical_examination__valid_until",
-
-	control_over_the_technical_condition_and_design_of_the_vehicle__performs = "control_over_the_technical_condition_and_design_of_the_vehicle__performs",
-	control_over_the_technical_condition_and_design_of_the_vehicle__on_the_basis_of = "control_over_the_technical_condition_and_design_of_the_vehicle__on_the_basis_of",
-	control_over_the_technical_condition_and_design_of_the_vehicle__valid_until = "control_over_the_technical_condition_and_design_of_the_vehicle__valid_until",
-
-	date_of_the_next_state_inspection = "date_of_the_next_state_inspection",
-
-	bus_parking_place_during_nonworking_hours = "bus_parking_place_during_nonworking_hours",
-	measures_to_prevent_unauthorized_use = "measures_to_prevent_unauthorized_use",
-
-	// 4. Сведения о владельце автобуса
-	bus_owner__legal_address = "bus_owner__legal_address",
-	bus_owner__actual_address = "bus_owner__actual_address",
-	bus_owner__phone_of_responsible_person = "bus_owner__phone_of_responsible_person"
-}
-
-export class PassportTemplate implements PassportTemplateType {
+// AUTO-GEN BY IDE
+export class PassportTemplateModel implements PassportTemplateType {
 	the_presence_of_the_yid_squad: string;
 	head_of_the_yid_squad__job_title: string;
 	head_of_the_yid_squad__full_name: string;
@@ -173,7 +64,7 @@ export class PassportTemplate implements PassportTemplateType {
 	bus_owner__phone_of_responsible_person: string;
 	availability_of_a_corner_for_bdd: string;
 	name_of_the_educational_institution: string;
-	the_last_two_digits_of_the_year: string = `${new Date().getFullYear() % 100}`;
+	year: string = `${new Date().getFullYear()}`;
 	actual_address: string;
 	deputy_director_for_academic_affairs__full_name: string;
 	deputy_director_for_academic_affairs__phone: string;

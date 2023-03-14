@@ -1,5 +1,5 @@
 /// <reference types='leaflet-sidebar-v2' />
-import { Component, ElementRef, OnDestroy, ViewChild } from "@angular/core";
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from "@angular/core";
 import { Map as LeafletMap, Icon, IconOptions, Control, map } from "leaflet";
 import "@geoman-io/leaflet-geoman-free";
 import { MatIconRegistry } from "@angular/material/icon";
@@ -26,7 +26,7 @@ import { bigImageControl } from "../../configuration";
 	templateUrl: "./map-page.component.html",
 	styleUrls: ["./map-page.component.scss"]
 })
-export class MapPageComponent implements OnDestroy {
+export class MapPageComponent implements OnInit, OnDestroy {
 	@ViewChild("legendRef", { read: ElementRef })
 	public legendRef: ElementRef<HTMLDivElement>;
 
@@ -40,10 +40,7 @@ export class MapPageComponent implements OnDestroy {
 		domSanitizer: DomSanitizer,
 		public signStorageService: SignStorageService
 	) {
-		matIconRegistry.addSvgIcon(
-			"github",
-			domSanitizer.bypassSecurityTrustResourceUrl("assets/github.svg")
-		);
+		matIconRegistry.addSvgIcon("github", domSanitizer.bypassSecurityTrustResourceUrl("assets/github.svg"));
 	}
 
 	onMapReady(map: LeafletMap) {
@@ -103,6 +100,10 @@ export class MapPageComponent implements OnDestroy {
 
 	ngOnDestroy(): void {
 		this.signStorageService.clear();
+	}
+
+	ngOnInit(): void {
+		setTimeout(this.map.invalidateSize.bind(this.map));
 	}
 
 	legend2image() {
