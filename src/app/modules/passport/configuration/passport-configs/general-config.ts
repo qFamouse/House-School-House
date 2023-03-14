@@ -8,11 +8,13 @@ export type GeneralConfig = {
 export const generalConfig: GeneralConfig = {
 	[GeneralVariables.full_name_of_the_educational_institution]: {
 		text: "Полное наименование учреждения образования",
-		maxLength: 192
+		maxLength: 192,
+		required: true
 	},
 	[GeneralVariables.type_of_educational_institution]: {
 		text: "Тип учреждения образования",
-		maxLength: 34
+		maxLength: 34,
+		required: true
 	},
 	[GeneralVariables.legal_address]: {
 		text: "Юридический адрес",
