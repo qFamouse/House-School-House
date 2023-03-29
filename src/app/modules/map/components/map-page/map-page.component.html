@@ -49,12 +49,12 @@
             <h1 class="leaflet-sidebar-header">Полный список</h1>
           </div>
           <div class="custom-leaflet-sidebar-content">
-            <app-marker *ngFor="let sign of signs"
-                        [src]="sign.src"
-                        [alt]="sign.signNumber"
-                        [title]="sign.title"
-                        [description]="sign.explanation"
-                        (click)="drawSign(sign.src, sign.title)"
+            <app-marker *ngFor="let sign of signs | keyvalue"
+                        [src]="sign.value.filename"
+                        [alt]="sign.value.signNumber"
+                        [title]="sign.value.title"
+                        [description]="sign.value.explanation"
+                        (click)="drawSign(sign.value.filename, sign.value.title)"
             ></app-marker>
           </div>
         </div>

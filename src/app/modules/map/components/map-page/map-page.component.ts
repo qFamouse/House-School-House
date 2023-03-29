@@ -1,10 +1,15 @@
 /// <reference types='leaflet-sidebar-v2' />
-import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from "@angular/core";
+import {
+	Component,
+	ElementRef,
+	OnDestroy,
+	OnInit,
+	ViewChild
+} from "@angular/core";
 import { Map as LeafletMap, Icon, IconOptions, Control, map } from "leaflet";
 import "@geoman-io/leaflet-geoman-free";
 import { MatIconRegistry } from "@angular/material/icon";
 import { DomSanitizer } from "@angular/platform-browser";
-import { Sign } from "../../../../shared/models/sign";
 import { SignStorageService } from "../../../../shared/services/sign-storage.service";
 import html2canvas from "html2canvas";
 import { saveAs } from "file-saver";
@@ -17,9 +22,10 @@ import {
 } from "../../configuration";
 import { routeControlOptions } from "../../configuration";
 import { geomanGlobalOptions, geomanToolbarOptions } from "../../configuration";
-import { appSignsConfiguration } from "../../configuration";
 import { locateControl } from "../../configuration";
 import { bigImageControl } from "../../configuration";
+import { SignService } from "../../../../shared/services/sign.service";
+import { Sign } from "../../../../shared/models/sign";
 
 @Component({
 	selector: "app-map-page",
@@ -34,13 +40,21 @@ export class MapPageComponent implements OnInit, OnDestroy {
 	mapOptions = mapOptions;
 	controlLayersConfig = controlLayersConfig;
 	layersControlOptions = layersControlOptions;
-	signs: Sign[] = appSignsConfiguration;
+	signs: Map<number, Sign> = null;
 	constructor(
 		matIconRegistry: MatIconRegistry,
 		domSanitizer: DomSanitizer,
-		public signStorageService: SignStorageService
+		public signStorageService: SignStorageService,
+		public signService: SignService
 	) {
-		matIconRegistry.addSvgIcon("github", domSanitizer.bypassSecurityTrustResourceUrl("assets/github.svg"));
+		matIconRegistry.addSvgIcon(
+			"github",
+			domSanitizer.bypassSecurityTrustResourceUrl("assets/github.svg")
+		);
+
+		signService.getAll().subscribe(signs => {
+			this.signs = signs;
+		});
 	}
 
 	onMapReady(map: LeafletMap) {
@@ -103,7 +117,7 @@ export class MapPageComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnInit(): void {
-		setTimeout(this.map.invalidateSize.bind(this.map));
+		// setTimeout(this.map.invalidateSize.bind(this.map));
 	}
 
 	legend2image() {

@@ -1,7 +1,7 @@
 export interface Sign {
+	filename: string;
 	signNumber: string;
-	src: string;
-	webSrc: string;
 	title: string;
+	// webURL
 	explanation: string;
 }
