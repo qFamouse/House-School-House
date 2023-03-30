@@ -1,14 +1,7 @@
-import { Injectable, OnInit } from "@angular/core";
-import { NgxCsvParser, NgxCSVParserError } from "ngx-csv-parser";
+import { Injectable } from "@angular/core";
+import { NgxCsvParser } from "ngx-csv-parser";
 import { HttpClient } from "@angular/common/http";
-import {
-	BehaviorSubject,
-	first,
-	firstValueFrom,
-	map,
-	Observable,
-	Subject
-} from "rxjs";
+import { BehaviorSubject, first, firstValueFrom, map, Observable } from "rxjs";
 import { Sign } from "../models/sign";
 
 @Injectable({
@@ -30,7 +23,6 @@ export class SignService {
 	}
 
 	async init(): Promise<void> {
-		console.log("kek");
 		// Initialize local sign storage
 		let csvFile = await firstValueFrom(this.getCsvFile());
 		let csvRecords = await firstValueFrom(this.parseCsvFile(csvFile));
@@ -39,7 +31,7 @@ export class SignService {
 
 	private getCsvFile(): Observable<File> {
 		return this.httpClient
-			.get("assets/signs.csv", { responseType: "text" })
+			.get("assets/signs/signs.csv", { responseType: "text" })
 			.pipe(
 				first(),
 				map(data => new File([data], "signs.csv"))
@@ -61,10 +53,9 @@ export class SignService {
 			let id = record[0];
 
 			let sign: Sign = {
-				filename: record[1],
-				signNumber: record[2],
-				title: record[3],
-				explanation: record[4]
+				number: record[1],
+				title: record[2],
+				explanation: record[3]
 			};
 
 			if (signs.has(id)) {
