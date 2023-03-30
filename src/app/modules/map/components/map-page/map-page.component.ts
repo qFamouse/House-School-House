@@ -6,7 +6,7 @@ import {
 	OnInit,
 	ViewChild
 } from "@angular/core";
-import { Map as LeafletMap, Icon, IconOptions, Control, map } from "leaflet";
+import { Map as LeafletMap, Icon, IconOptions, Control } from "leaflet";
 import "@geoman-io/leaflet-geoman-free";
 import { MatIconRegistry } from "@angular/material/icon";
 import { DomSanitizer } from "@angular/platform-browser";
@@ -26,6 +26,7 @@ import { locateControl } from "../../configuration";
 import { bigImageControl } from "../../configuration";
 import { SignService } from "../../../../shared/services/sign.service";
 import { Sign } from "../../../../shared/models/sign";
+import { assets } from "../../../../shared/constants/assets";
 
 @Component({
 	selector: "app-map-page",
@@ -41,6 +42,7 @@ export class MapPageComponent implements OnInit, OnDestroy {
 	controlLayersConfig = controlLayersConfig;
 	layersControlOptions = layersControlOptions;
 	signs: Map<number, Sign> = null;
+	assets = assets;
 	constructor(
 		matIconRegistry: MatIconRegistry,
 		domSanitizer: DomSanitizer,
@@ -81,12 +83,11 @@ export class MapPageComponent implements OnInit, OnDestroy {
 		this.map = map;
 	}
 
-	drawSign(iconUrl: string, title: string) {
+	drawSign(icon: string, title: string) {
 		this.map.pm.enableDraw("Marker", {
 			markerStyle: {
 				icon: new Icon<IconOptions>({
-					iconUrl: iconUrl,
-					iconSize: [35, 35],
+					iconUrl: `${assets.signs.compressed}/${icon}`,
 					iconAnchor: [20, 25]
 				}),
 				title: title

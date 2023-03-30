@@ -3,6 +3,7 @@ import { NgxCsvParser } from "ngx-csv-parser";
 import { HttpClient } from "@angular/common/http";
 import { BehaviorSubject, first, firstValueFrom, map, Observable } from "rxjs";
 import { Sign } from "../models/sign";
+import { assets } from "../constants/assets";
 
 @Injectable({
 	providedIn: "root"
@@ -31,7 +32,7 @@ export class SignService {
 
 	private getCsvFile(): Observable<File> {
 		return this.httpClient
-			.get("assets/signs/signs.csv", { responseType: "text" })
+			.get(`${assets.signs.signs}/signs.csv`, { responseType: "text" })
 			.pipe(
 				first(),
 				map(data => new File([data], "signs.csv"))

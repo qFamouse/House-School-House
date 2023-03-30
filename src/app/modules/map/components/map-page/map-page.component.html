@@ -50,7 +50,7 @@
           </div>
           <div class="custom-leaflet-sidebar-content">
             <app-marker *ngFor="let sign of signs | keyvalue"
-                        [src]="'assets/signs/compressed/' + sign.value.number + '.svg'"
+                        [src]="assets.signs.compressed + '/' + sign.value.number + '.svg'"
                         [alt]="sign.value.number"
                         [title]="sign.value.title"
                         [description]="sign.value.explanation"
