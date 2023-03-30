@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="300"
+   height="200"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="6.14.1 A.svg">
+  <title
+     id="title3002">6.13 Километровый знак</title>
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="162.41772"
+     inkscape:cy="117.4667"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1024"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-nodes="true"
+     inkscape:snap-smooth-nodes="true"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>6.13 Километровый знак</dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/" />
+        <dc:description>ГОСТ Р 52290-2004
+Размеры и пропорции по типоразмеру II</dc:description>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/3.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-852.36218)">
+    <rect
+       y="852.36218"
+       x="0"
+       height="200"
+       width="300"
+       id="rect7193"
+       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.54299997999999980;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;opacity:1"
+       rx="45"
+       ry="45" />
+    <rect
+       y="853.36218"
+       x="1"
+       height="198"
+       width="298"
+       id="rect7101"
+       style="color:#000000;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;opacity:1"
+       rx="44"
+       ry="44" />
+    <path
+       style="opacity:1;color:#000000;fill:#0d69e1;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.54299997999999980;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="M 45 10 C 25.61 10 10 25.61 10 45 L 10 155 C 10 174.39 25.61 190 45 190 L 255 190 C 274.39 190 290 174.39 290 155 L 290 45 C 290 25.61 274.39 10 255 10 L 45 10 z M 115.96875 67.96875 C 120.50577 68.066468 124.59738 69.628966 128.25 72.65625 C 131.90254 75.683651 133.84952 79.589897 134.0625 84.375 C 134.08585 88.118531 133.6595 91.021059 132.8125 93.0625 C 131.96541 95.104017 130.56073 97.269936 128.5625 99.5625 C 126.05409 102.66428 123.01917 105.97975 119.5 109.5 C 115.98077 113.02029 112.20575 116.87595 108.125 121.09375 L 134.0625 121.09375 C 134.06245 122.29819 133.86181 123.80339 133.46875 125.59375 C 133.0756 127.38412 132.47366 129.26432 131.6875 131.25 L 93.96875 131.25 L 93.96875 121.875 C 98.264788 117.99434 102.26551 114.11674 106 110.25 C 109.73445 106.3833 113.36513 102.37847 116.875 98.21875 C 118.82176 96.079647 120.40822 93.996316 121.625 91.96875 C 122.84171 89.941263 123.46253 87.407039 123.5 84.375 C 123.46486 82.326592 122.62151 80.487681 121 78.84375 C 119.37842 77.199924 117.19304 76.314136 114.40625 76.21875 C 112.06399 76.314134 109.85989 77.199923 107.8125 78.84375 C 105.76507 80.487682 103.76162 82.326592 101.8125 84.375 L 95.53125 77.34375 C 97.857097 74.609431 100.69137 72.386218 104 70.65625 C 107.30859 68.926403 111.28425 68.024618 115.96875 67.96875 z M 171.03125 67.96875 C 177.41913 68.194351 182.54221 71.328649 186.375 77.34375 C 190.2077 83.358959 192.15167 90.901733 192.25 100 C 192.15167 109.53778 190.2077 117.23569 186.375 123.0625 C 182.54221 128.88933 177.41913 131.86849 171.03125 132.03125 C 164.64331 131.86849 159.55148 128.88933 155.71875 123.0625 C 151.88599 117.23569 149.91077 109.53778 149.8125 100 C 149.91077 90.462279 151.88599 82.795621 155.71875 76.96875 C 159.55148 71.141987 164.64331 68.131573 171.03125 67.96875 z M 66.40625 68.75 L 75.84375 68.75 L 75.84375 131.25 L 64.84375 131.25 L 64.84375 82.8125 L 56.40625 88.0625 L 52.71875 83.25 L 66.40625 68.75 z M 207.96875 68.75 L 244.15625 68.75 L 241 78.90625 L 218.1875 78.90625 L 218.1875 93.75 C 219.4206 92.220091 220.97883 91.178426 222.84375 90.625 C 224.70862 90.071655 226.55536 89.811239 228.40625 89.84375 C 232.97603 89.876342 237.21182 91.584674 241.09375 94.9375 C 244.97559 98.290398 247.03551 103.09248 247.28125 109.375 C 247.19931 115.78777 245.02645 121.14194 240.71875 125.40625 C 236.41096 129.67058 230.45706 131.86849 222.90625 132.03125 C 219.18813 131.90104 215.8114 131.38021 212.78125 130.46875 C 209.75107 129.55729 208.14891 129.03646 207.96875 128.90625 L 206.40625 118.75 C 208.37643 120.00327 210.70283 120.85111 213.375 121.28125 C 216.04714 121.71141 218.69965 121.90524 221.34375 121.875 C 224.6851 121.87501 227.83295 120.89064 230.78125 118.9375 C 233.72949 116.98439 235.30341 114.06252 235.5 110.15625 C 235.48358 107.27541 234.53983 104.6426 232.65625 102.25 C 230.7726 99.857454 228.05427 98.584018 224.5 98.4375 C 222.14136 98.584016 220.16614 99.27933 218.59375 100.5 C 217.02132 101.72073 215.84869 102.58792 215.0625 103.125 L 207.96875 99.21875 L 207.96875 68.75 z M 171.03125 77.6875 C 167.95192 77.641049 165.50007 79.388072 163.65625 82.96875 C 161.81239 86.549524 160.85928 92.234041 160.8125 100 C 160.85928 107.76602 161.81239 113.45054 163.65625 117.03125 C 165.50007 120.61199 167.95192 122.35901 171.03125 122.3125 C 174.11052 122.35901 176.56238 120.61199 178.40625 117.03125 C 180.25005 113.45054 181.20316 107.76602 181.25 100 C 181.20316 92.234039 180.25005 86.549522 178.40625 82.96875 C 176.56238 79.388074 174.11052 77.641051 171.03125 77.6875 z "
+       transform="translate(0,852.36218)"
+       id="rect11508" />
+  </g>
+</svg>

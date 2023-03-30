@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="600"
+   height="600"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="3.12.1_(Road_sign) 2.svg">
+  <title
+     id="title3002">3.12.1 Ограничение массы, приходящейся на ось транспортного средства</title>
+  <defs
+     id="defs4">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath8474">
+      <use
+         x="0"
+         y="0"
+         xlink:href="#g8470"
+         id="use8476"
+         width="100%"
+         height="100%" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.96333333"
+     inkscape:cx="300"
+     inkscape:cy="300"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1304"
+     inkscape:window-height="745"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid70" />
+    <sodipodi:guide
+       position="320,330"
+       orientation="0,1"
+       id="guide72"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>3.12.1 Ограничение массы, приходящейся на ось транспортного средства</dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+        <dc:description>ГОСТ Р 52290-2004
+Размеры и пропорции по типоразмеру I</dc:description>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-452.36218)">
+    <path
+       sodipodi:type="arc"
+       style="opacity:1;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path5334"
+       sodipodi:cx="-87.720657"
+       sodipodi:cy="432.25998"
+       sodipodi:rx="22.107042"
+       sodipodi:ry="29.465372"
+       d="m -65.613615,432.25998 c 0,16.27327 -9.89766,29.46537 -22.107042,29.46537 -12.209383,0 -22.107043,-13.1921 -22.107043,-29.46537 0,-16.27328 9.89766,-29.46537 22.107043,-29.46537 12.209382,0 22.107042,13.19209 22.107042,29.46537 z"
+       transform="matrix(13.570336,0,0,10.181443,1490.3988,-3648.6681)" />
+    <path
+       transform="matrix(13.525102,0,0,10.147505,1486.4308,-3633.998)"
+       d="m -65.613615,432.25998 c 0,16.27327 -9.89766,29.46537 -22.107042,29.46537 -12.209383,0 -22.107043,-13.1921 -22.107043,-29.46537 0,-16.27328 9.89766,-29.46537 22.107043,-29.46537 12.209382,0 22.107042,13.19209 22.107042,29.46537 z"
+       sodipodi:ry="29.465372"
+       sodipodi:rx="22.107042"
+       sodipodi:cy="432.25998"
+       sodipodi:cx="-87.720657"
+       id="path3003"
+       style="color:#000000;fill:none;stroke:#000000;stroke-width:0.17071831000000001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;opacity:1"
+       sodipodi:type="arc" />
+    <path
+       style="opacity:1;color:#000000;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="M 300 10 C 139.83742 10 10 139.83742 10 300 C 10 460.16258 139.83742 590 300 590 C 460.16258 590 590 460.16258 590 300 C 590 139.83742 460.16258 10 300 10 z M 300 59.03125 C 433.0828 59.03125 540.96875 166.91719 540.96875 300 C 540.96875 433.08281 433.0828 540.96875 300 540.96875 C 166.9172 540.96875 59.03125 433.08281 59.03125 300 C 59.03125 166.91719 166.9172 59.03125 300 59.03125 z "
+       transform="translate(0,452.36218)"
+       id="path4775-9" />
+    <path
+       id="path6892"
+       style="opacity:1;color:#000000;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 300.0001,781.3944 -3.7e-4,0 c -12.66298,0 -23.90819,6.08348 -30.97057,15.48386 -3.5313,4.69896 -9.15053,7.74194 -15.48104,7.74194 l -79.35447,-2e-5 0,-32.9032 c 0,-10.68939 -8.66545,-19.35484 -19.35484,-19.35484 -10.68938,0 -19.35484,8.66545 -19.35484,19.35484 l 0,96.77419 0,0 c 0,10.68938 8.66546,19.35484 19.35484,19.35484 10.68939,0 19.35484,-8.66546 19.35484,-19.35484 l 0,-32.90325 79.35057,0 c 6.33051,0 11.94974,3.04299 15.48298,7.74195 7.06433,9.40037 18.30955,15.48388 30.97253,15.48388 12.66298,0 23.90819,-6.08351 30.97076,-15.48388 3.53148,-4.69896 9.15071,-7.74195 15.48122,-7.74195 l 79.35484,0 0,32.90325 0,0 c 0,10.68938 8.66546,19.35484 19.35484,19.35484 10.68938,0 19.35484,-8.66546 19.35484,-19.35484 l 0,-96.77419 c 0,-10.68939 -8.66546,-19.35484 -19.35484,-19.35484 -10.68938,0 -19.35484,8.66545 -19.35484,19.35484 l 0,32.9032 -79.35097,0 c -6.33051,0 -11.94974,-3.04298 -15.48315,-7.74193 -7.06415,-9.40037 -18.30935,-15.48385 -30.97233,-15.48385 z"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sscccsssccsscccscccccssssscccs" />
+    <g
+       aria-label="с"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:226.66667175px;line-height:1.25;font-family:'IndorSoft RoadSign Letters';-inkscape-font-specification:'IndorSoft RoadSign Letters';letter-spacing:0px;word-spacing:0px;fill:black;fill-opacity:1;stroke:none"
+       id="text86">
+      <g
+         id="g46">
+        <g
+           inkscape:label="Clip"
+           id="g8470"
+           style="">
+          <g
+             aria-label="5"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:240px;line-height:50;font-family:'IndorSoft RoadSign Letters';-inkscape-font-specification:'IndorSoft RoadSign Letters';letter-spacing:0px;word-spacing:0px;fill:black;fill-opacity:1;stroke:none"
+             id="text76">
+            <path
+               d="M 233.54,607.80218 H 184.82 V 639.72218 Q 191.06,631.32218 206.66,631.32218 221.78,631.32218 234.26,642.84218 246.98,654.36218 246.98,673.32218 246.98,693.96218 232.58,708.12218 218.18,722.04218 194.9,722.04218 188.18,722.04218 180.26,720.36218 172.34,718.68218 167.54,717.00218 L 162.98,715.32218 159.62,693.48218 Q 169.46,700.20218 191.54,700.20218 202.82,700.20218 212.18,693.48218 221.78,686.76218 221.78,675.00218 221.78,665.40218 215.3,657.72218 208.82,649.80218 198.26,649.80218 193.7,649.80218 189.62,651.96218 185.54,653.88218 182.18,656.76218 178.82,659.40218 178.1,659.88218 L 162.98,651.48218 V 585.96218 H 240.26 Z"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Russian Road Sign';-inkscape-font-specification:'Russian Road Sign'"
+               id="path8478"
+               inkscape:connector-curvature="0" />
+          </g>
+        </g>
+        <g
+           id="text82"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:242.66667175px;line-height:1.25;font-family:'IndorSoft RoadSign Letters';-inkscape-font-specification:'IndorSoft RoadSign Letters';letter-spacing:0px;word-spacing:0px;fill:black;fill-opacity:1;stroke:none"
+           aria-label="т">
+          <path
+             id="path8481"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Russian Road Sign';-inkscape-font-specification:'Russian Road Sign'"
+             d="M 291.13333,645.92218 V 627.23685 H 368.544 V 645.92218 H 340.152 V 722.36218 H 319.768 V 645.92218 Z" />
+        </g>
+        <path
+           id="path8484"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Russian Road Sign';-inkscape-font-specification:'Russian Road Sign'"
+           d="M 422.62,627.33551 Q 435.99333,627.33551 445.96667,634.58885 456.16667,641.61551 460.7,654.30885 L 442.79334,661.10885 Q 437.58,643.20218 422.62,643.20218 412.87333,643.20218 406.52667,652.04218 400.40667,660.88218 400.40667,674.93551 400.40667,688.98885 406.52667,697.82885 412.87333,706.66885 422.62,706.66885 437.58,706.66885 442.79334,688.76218 L 460.7,695.56218 Q 456.16667,708.25552 445.96667,715.50885 435.99333,722.53552 422.62,722.53552 404.48667,722.53552 392.02,709.38885 379.78,696.01552 379.78,674.93551 379.78,653.85551 392.02,640.70885 404.48667,627.33551 422.62,627.33551 Z" />
+      </g>
+    </g>
+  </g>
+</svg>

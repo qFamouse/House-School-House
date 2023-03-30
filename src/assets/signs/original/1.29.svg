@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="634.14001"
+   height="561.22998"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040">
+  <title
+     id="title3002">1.29 Аварийно-опасный участок</title>
+  <defs
+     id="defs4" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>1.29 Аварийно-опасный участок</dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/" />
+        <dc:description>СТБ 1140-99
+Размеры и пропорции по типоразмеру 2</dc:description>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/3.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       sodipodi:nodetypes="sccsccsccs"
+       inkscape:connector-curvature="0"
+       d="M 339.56535,6.0402705 C 318.04225,-6.3860695 290.5206,0.98827047 278.09418,22.51155 L 6.0363923,493.72983 c -12.42642,21.52305 -5.05209,49.04465 16.4710997,61.47105 6.84091,3.9496 14.60091,6.029 22.50008,6.029 l 544.115668,-10e-5 c 7.89925,0 15.65925,-2.0794 22.50007,-6.029 21.52319,-12.4264 28.89761,-39.948 16.47119,-61.47104 L 356.03654,22.51155 C 352.08691,15.67064 346.40626,9.9898905 339.56535,6.0402705 z"
+       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path9630" />
+    <path
+       id="path5791"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 1.0074138,516.22998 c 5.7e-5,-7.72358 2.033128,-15.31118 5.894964,-21.99998 L 278.96019,23.0119 C 291.11045,1.9671005 318.02044,-5.2434995 339.06531,6.9067005 345.75414,10.7685 351.30861,16.323 355.17043,23.0119 L 627.22812,494.23 c 3.86184,6.6888 5.89491,14.2764 5.89497,21.99998 -7e-5,24.3005 -19.69961,43.9999 -44.00009,44 l -544.115503,0 c -24.300475,-10e-5 -44.0000132,-19.6995 -44.0000832,-44 z"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccscccccc" />
+    <path
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       d="M 316.3125,9.9999205 C 304.49402,10.264701 293.09264,16.514098 286.75,27.49992 L 14.6875,498.71867 c -9.6649805,16.74028 -3.92774,38.1475 12.8125,47.8125 5.32067,3.0719 11.35622,4.6875 17.5,4.6875 l 544.125,0 c 6.14378,0 12.17933,-1.6156 17.5,-4.6875 16.74024,-9.665 22.47748,-31.07222 12.8125,-47.8125 L 347.375,27.49992 c -3.07189,-5.3207 -7.49182,-9.7406 -12.8125,-12.8125 -5.75445,-3.322344 -12.05937,-4.8261941 -18.25,-4.6874995 z M 316.375,70.24992 c 1.92128,-0.135735 3.8939,0.308188 5.6875,1.34375 1.52019,0.8776 2.77858,2.13455 3.65625,3.65625 l 241.5625,418.375 c 2.76096,4.78055 1.12668,10.89475 -3.65625,13.65625 -1.52019,0.8776 -3.24473,1.34375 -5,1.34375 l -483.09375,0 c -5.522814,0 -10,-4.4771 -10,-10 0,-1.75545 0.436191,-3.4822 1.3125,-5 l 241.5625,-418.375 c 1.72561,-2.988813 4.76661,-4.773775 7.96875,-5 z"
+       id="path4410"
+       inkscape:connector-curvature="0" />
+	<circle cx="317.07" cy="350.77" r="70.153" style="fill:#000000"/>
+  </g>
+</svg>
