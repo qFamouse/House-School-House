@@ -12,7 +12,13 @@ import {
 	controlLayersConfig,
 	layersControlOptions,
 	zoomControl,
-	attributionControl
+	attributionControl,
+	geomanRouteGlobalOptions_OSM,
+	geomanRouteGlobalOptions_SAS,
+	geomanRouteGlobalOptions_SASD,
+	geomanRouteGlobalOptions_SOSMB,
+	geomanRouteGlobalOptions_EWI,
+	geomanRouteGlobalOptions_OTM
 } from "../../configuration";
 import { routeControlOptions } from "../../configuration";
 import { geomanGlobalOptions, geomanToolbarOptions } from "../../configuration";
@@ -73,6 +79,30 @@ export class MapPageComponent implements OnDestroy {
 		map.pm.setLang("ru");
 		map.on("pm:create", event => this.pmCreate(event));
 		map.on("pm:remove", event => this.pmRemove(event));
+
+		map.on("baselayerchange", event => {
+			console.log(event.name);
+
+			switch (event.name) {
+				case "Open Street Map":
+					return map.pm.setGlobalOptions(geomanRouteGlobalOptions_OSM);
+
+				case "OpenTopoMap":
+					return map.pm.setGlobalOptions(geomanRouteGlobalOptions_OTM);
+
+				case "Stadia AlidadeSmooth":
+					return map.pm.setGlobalOptions(geomanRouteGlobalOptions_SAS);
+
+				case "Stadia AlidadeSmooth Dark":
+					return map.pm.setGlobalOptions(geomanRouteGlobalOptions_SASD);
+
+				case "Stadia OSMBright":
+					return map.pm.setGlobalOptions(geomanRouteGlobalOptions_SOSMB);
+
+				case "Esri WorldImagery":
+					return map.pm.setGlobalOptions(geomanRouteGlobalOptions_EWI);
+			}
+		});
 
 		this.map = map;
 		setTimeout(this.map.invalidateSize.bind(this.map));
