@@ -1,11 +1,5 @@
 /// <reference types='leaflet-sidebar-v2' />
-import {
-	Component,
-	ElementRef,
-	OnDestroy,
-	OnInit,
-	ViewChild
-} from "@angular/core";
+import { Component, ElementRef, OnDestroy, ViewChild } from "@angular/core";
 import { Map as LeafletMap, Icon, IconOptions, Control } from "leaflet";
 import "@geoman-io/leaflet-geoman-free";
 import { MatIconRegistry } from "@angular/material/icon";
@@ -33,7 +27,7 @@ import { assets } from "../../../../shared/constants/assets";
 	templateUrl: "./map-page.component.html",
 	styleUrls: ["./map-page.component.scss"]
 })
-export class MapPageComponent implements OnInit, OnDestroy {
+export class MapPageComponent implements OnDestroy {
 	@ViewChild("legendRef", { read: ElementRef })
 	public legendRef: ElementRef<HTMLDivElement>;
 
@@ -81,6 +75,7 @@ export class MapPageComponent implements OnInit, OnDestroy {
 		map.on("pm:remove", event => this.pmRemove(event));
 
 		this.map = map;
+		setTimeout(this.map.invalidateSize.bind(this.map));
 	}
 
 	drawSign(icon: string, title: string) {
@@ -115,10 +110,6 @@ export class MapPageComponent implements OnInit, OnDestroy {
 
 	ngOnDestroy(): void {
 		this.signStorageService.clear();
-	}
-
-	ngOnInit(): void {
-		// setTimeout(this.map.invalidateSize.bind(this.map));
 	}
 
 	legend2image() {
