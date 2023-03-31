@@ -44,16 +44,9 @@ export class MapPageComponent implements OnDestroy {
 	signs: Map<number, Sign> = null;
 	assets = assets;
 	constructor(
-		matIconRegistry: MatIconRegistry,
-		domSanitizer: DomSanitizer,
 		public signStorageService: SignStorageService,
 		public signService: SignService
 	) {
-		matIconRegistry.addSvgIcon(
-			"github",
-			domSanitizer.bypassSecurityTrustResourceUrl("assets/github.svg")
-		);
-
 		signService.getAll().subscribe(signs => {
 			this.signs = signs;
 		});
