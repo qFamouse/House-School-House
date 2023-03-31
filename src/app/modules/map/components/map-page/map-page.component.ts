@@ -63,8 +63,8 @@ export class MapPageComponent implements OnDestroy {
 		map.pm.Toolbar.copyDrawControl("Polyline", routeControlOptions);
 		map.pm.setGlobalOptions(geomanGlobalOptions);
 		map.pm.setLang("ru");
-		map.on("pm:create", event => this.pmCreate(event));
-		map.on("pm:remove", event => this.pmRemove(event));
+		map.on("pm:create", event => this.saveMarkerToLegend(event));
+		map.on("pm:remove", event => this.removeMarkerFromLegend(event));
 
 		map.on("baselayerchange", event => {
 			this.map.pm.setGlobalOptions(getRouteOptionsByMapProvider(event.name));
@@ -87,7 +87,7 @@ export class MapPageComponent implements OnDestroy {
 		});
 	}
 
-	pmCreate(event: any) {
+	saveMarkerToLegend(event: any) {
 		if (event.shape != "Marker") {
 			return;
 		}
@@ -96,7 +96,7 @@ export class MapPageComponent implements OnDestroy {
 		this.signStorageService.add(key, title);
 	}
 
-	pmRemove(event: any) {
+	removeMarkerFromLegend(event: any) {
 		if (event.shape != "Marker") {
 			return;
 		}
