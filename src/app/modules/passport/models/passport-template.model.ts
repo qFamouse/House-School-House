@@ -1,6 +1,6 @@
-import { TitularVariables } from "../configuration/passport-variables/titular-variables";
-import { GeneralVariables } from "../configuration/passport-variables/general-variables";
-import { VehicleVariables } from "../configuration/passport-variables/vehicle-variables";
+import { TitularVariables } from "../constants/passport-variables/titular-variables";
+import { GeneralVariables } from "../constants/passport-variables/general-variables";
+import { VehicleVariables } from "../constants/passport-variables/vehicle-variables";
 
 type PassportTemplateType = {
 	[variable in TitularVariables | GeneralVariables | VehicleVariables]: string;
