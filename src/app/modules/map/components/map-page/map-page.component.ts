@@ -19,11 +19,11 @@ import {
 	geomanRouteGlobalOptions_SOSMB,
 	geomanRouteGlobalOptions_EWI,
 	geomanRouteGlobalOptions_OTM
-} from "../../configuration";
-import { routeControlOptions } from "../../configuration";
-import { geomanGlobalOptions, geomanToolbarOptions } from "../../configuration";
-import { locateControl } from "../../configuration";
-import { bigImageControl } from "../../configuration";
+} from "../../constants";
+import { routeControlOptions } from "../../constants";
+import { geomanGlobalOptions, geomanToolbarOptions } from "../../constants";
+import { locateControl } from "../../constants";
+import { bigImageControl } from "../../constants";
 import { SignService } from "../../../../shared/services/sign.service";
 import { Sign } from "../../../../shared/models/sign";
 import { assets } from "../../../../shared/constants/assets";
