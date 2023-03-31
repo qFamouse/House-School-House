@@ -10,13 +10,7 @@ import {
 	controlLayersConfig,
 	layersControlOptions,
 	zoomControl,
-	attributionControl,
-	geomanRouteGlobalOptions_OSM,
-	geomanRouteGlobalOptions_SAS,
-	geomanRouteGlobalOptions_SASD,
-	geomanRouteGlobalOptions_SOSMB,
-	geomanRouteGlobalOptions_EWI,
-	geomanRouteGlobalOptions_OTM
+	attributionControl
 } from "../../constants";
 import { routeControlOptions } from "../../constants";
 import { geomanGlobalOptions, geomanToolbarOptions } from "../../constants";
@@ -25,6 +19,7 @@ import { bigImageControl } from "../../constants";
 import { SignService } from "../../../../shared/services/sign.service";
 import { Sign } from "../../../../shared/models/sign";
 import { assets } from "../../../../shared/constants/assets";
+import { getRouteOptionsByMapProvider } from "../../utils/get-route-options-by-map-provider";
 
 @Component({
 	selector: "app-map-page",
@@ -72,27 +67,7 @@ export class MapPageComponent implements OnDestroy {
 		map.on("pm:remove", event => this.pmRemove(event));
 
 		map.on("baselayerchange", event => {
-			console.log(event.name);
-
-			switch (event.name) {
-				case "Open Street Map":
-					return map.pm.setGlobalOptions(geomanRouteGlobalOptions_OSM);
-
-				case "OpenTopoMap":
-					return map.pm.setGlobalOptions(geomanRouteGlobalOptions_OTM);
-
-				case "Stadia AlidadeSmooth":
-					return map.pm.setGlobalOptions(geomanRouteGlobalOptions_SAS);
-
-				case "Stadia AlidadeSmooth Dark":
-					return map.pm.setGlobalOptions(geomanRouteGlobalOptions_SASD);
-
-				case "Stadia OSMBright":
-					return map.pm.setGlobalOptions(geomanRouteGlobalOptions_SOSMB);
-
-				case "Esri WorldImagery":
-					return map.pm.setGlobalOptions(geomanRouteGlobalOptions_EWI);
-			}
+			this.map.pm.setGlobalOptions(getRouteOptionsByMapProvider(event.name));
 		});
 
 		this.map = map;
