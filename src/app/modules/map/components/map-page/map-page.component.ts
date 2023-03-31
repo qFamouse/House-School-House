@@ -2,8 +2,6 @@
 import { Component, ElementRef, OnDestroy, ViewChild } from "@angular/core";
 import { Map as LeafletMap, Icon, IconOptions, Control } from "leaflet";
 import "@geoman-io/leaflet-geoman-free";
-import { MatIconRegistry } from "@angular/material/icon";
-import { DomSanitizer } from "@angular/platform-browser";
 import { SignStorageService } from "../../../../shared/services/sign-storage.service";
 import html2canvas from "html2canvas";
 import { saveAs } from "file-saver";
@@ -135,7 +133,7 @@ export class MapPageComponent implements OnDestroy {
 		this.signStorageService.clear();
 	}
 
-	legend2image() {
+	saveMapLegend() {
 		html2canvas(this.legendRef.nativeElement, {
 			useCORS: true
 		}).then(canvas => {
