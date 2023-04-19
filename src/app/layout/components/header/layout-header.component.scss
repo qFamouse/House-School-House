@@ -90,8 +90,14 @@
     font-weight: 400;
     @include font-size(1em, 3em, 4);
 
+    color: white !important;
+
+    @include breakpoint(sm) {
+      color: unset !important;
+    }
+
     &:hover {
-      color: darkorange;
+      color: darkorange !important;
     }
   }
 
