@@ -48,17 +48,17 @@
             <div class="leaflet-sidebar-close"><mat-icon>keyboard_arrow_right</mat-icon></div>
             <h1 class="leaflet-sidebar-header">Полный список</h1>
           </div>
-          <div class="custom-leaflet-sidebar-content">
-            <app-marker *ngFor="let sign of signs | keyvalue"
-                        [iconSrc]="assets.signs.compressed + '/' + sign.value.number + '.svg'"
-                        [iconAlt]="sign.value.number"
-                        [iconTitle]="sign.value.number"
-                        [MarkerTitle]="sign.value.title"
-                        [MarkerDescription]="sign.value.explanation"
-                        (click)="drawSign(sign.value.number + '.svg', sign.value.title)"
-                        (onLike)="addMarkerToFavourite(sign.key)"
-            ></app-marker>
-          </div>
+            <cdk-virtual-scroll-viewport itemSize="70" minBufferPx="1050" maxBufferPx="1200" class="custom-leaflet-sidebar-content">
+              <app-marker *cdkVirtualFor="let sign of signs"
+                          [iconSrc]="assets.signs.compressed + '/' + sign.number + '.svg'"
+                          [iconAlt]="sign.number"
+                          [iconTitle]="sign.number"
+                          [MarkerTitle]="sign.title"
+                          [MarkerDescription]="sign.explanation"
+                          (click)="drawSign(sign.number + '.svg', sign.title)"
+                          (onLike)="addMarkerToFavourite(sign.id)"
+              ></app-marker>
+            </cdk-virtual-scroll-viewport>
         </div>
       </div>
 

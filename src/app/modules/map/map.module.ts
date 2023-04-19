@@ -9,6 +9,11 @@ import { LegendComponent } from "./components/legend/legend.component";
 import { MatButtonModule } from "@angular/material/button";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatRippleModule } from "@angular/material/core";
+import {
+	CdkFixedSizeVirtualScroll,
+	CdkVirtualForOf,
+	CdkVirtualScrollViewport
+} from "@angular/cdk/scrolling";
 
 @NgModule({
 	declarations: [MapPageComponent, MarkerComponent, LegendComponent],
@@ -19,7 +24,10 @@ import { MatRippleModule } from "@angular/material/core";
 		HttpClientModule,
 		MatButtonModule,
 		MatTooltipModule,
-		MatRippleModule
+		MatRippleModule,
+		CdkVirtualForOf,
+		CdkVirtualScrollViewport,
+		CdkFixedSizeVirtualScroll
 	]
 })
 export class MapModule {}
