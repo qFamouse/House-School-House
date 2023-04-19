@@ -6,6 +6,8 @@ $inner-space: 5px;
   //border-right: none;
   //border-left: none;
 
+  height: 80px;
+
   &_body {
     display: grid;
     grid-template-columns: 50px 1fr 25px;

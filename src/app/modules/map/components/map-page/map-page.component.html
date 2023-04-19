@@ -48,7 +48,7 @@
             <div class="leaflet-sidebar-close"><mat-icon>keyboard_arrow_right</mat-icon></div>
             <h1 class="leaflet-sidebar-header">Полный список</h1>
           </div>
-            <cdk-virtual-scroll-viewport itemSize="70" minBufferPx="1050" maxBufferPx="1200" class="custom-leaflet-sidebar-content">
+            <cdk-virtual-scroll-viewport itemSize="80" minBufferPx="1050" maxBufferPx="1200" class="custom-leaflet-sidebar-content">
               <app-marker *cdkVirtualFor="let sign of signs"
                           [iconSrc]="assets.signs.compressed + '/' + sign.number + '.svg'"
                           [iconAlt]="sign.number"
