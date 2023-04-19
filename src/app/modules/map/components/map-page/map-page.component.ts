@@ -20,6 +20,7 @@ import { SignService } from "../../../../shared/services/sign.service";
 import { Sign } from "../../../../shared/models/sign";
 import { assets } from "../../../../shared/constants/assets";
 import { getRouteOptionsByMapProvider } from "../../utils/get-route-options-by-map-provider";
+import { Subject, takeUntil } from "rxjs";
 
 @Component({
 	selector: "app-map-page",
@@ -27,6 +28,8 @@ import { getRouteOptionsByMapProvider } from "../../utils/get-route-options-by-m
 	styleUrls: ["./map-page.component.scss"]
 })
 export class MapPageComponent implements OnDestroy {
+	subNotifier = new Subject<void>();
+
 	@ViewChild("legendRef", { read: ElementRef })
 	public legendRef: ElementRef<HTMLDivElement>;
 
@@ -40,9 +43,12 @@ export class MapPageComponent implements OnDestroy {
 		public signStorageService: SignStorageService,
 		public signService: SignService
 	) {
-		signService.getAll().subscribe(signs => {
-			this.signs = signs;
-		});
+		signService
+			.getAll()
+			.pipe(takeUntil(this.subNotifier))
+			.subscribe(signs => {
+				this.signs = signs;
+			});
 	}
 
 	onMapReady(map: LeafletMap) {
@@ -106,6 +112,9 @@ export class MapPageComponent implements OnDestroy {
 
 	ngOnDestroy(): void {
 		this.signStorageService.clear();
+
+		this.subNotifier.next();
+		this.subNotifier.complete();
 	}
 
 	saveMapLegend() {
