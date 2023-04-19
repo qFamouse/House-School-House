@@ -116,4 +116,8 @@ export class MapPageComponent implements OnDestroy {
 			saveAs(img, "legend.png");
 		});
 	}
+
+	addMarkerToFavourite(markerId: number) {
+		console.log("Some handler for marker: ", markerId);
+	}
 }

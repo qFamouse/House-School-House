@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
 	selector: "app-marker",
@@ -6,8 +6,15 @@ import { Component, Input } from "@angular/core";
 	styleUrls: ["./marker.component.scss"]
 })
 export class MarkerComponent {
-	@Input() src: string;
-	@Input() alt: string = "Маркер";
-	@Input() title: string;
-	@Input() description: string;
+	@Input() iconSrc: string;
+	@Input() iconTitle: string;
+	@Input() iconAlt: string = "Маркер";
+	@Input() MarkerTitle: string;
+	@Input() MarkerDescription: string;
+
+	@Output() onLike = new EventEmitter<MouseEvent>();
+	like(event: MouseEvent) {
+		this.onLike.emit(event);
+		event.stopPropagation();
+	}
 }

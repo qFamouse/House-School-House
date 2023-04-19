@@ -5,8 +5,10 @@ import { LeafletModule } from "@asymmetrik/ngx-leaflet";
 import { MatIconModule } from "@angular/material/icon";
 import { HttpClientModule } from "@angular/common/http";
 import { MarkerComponent } from "./components/marker/marker.component";
-import { LegendComponent } from './components/legend/legend.component';
-import {MatButtonModule} from "@angular/material/button";
+import { LegendComponent } from "./components/legend/legend.component";
+import { MatButtonModule } from "@angular/material/button";
+import { MatTooltipModule } from "@angular/material/tooltip";
+import { MatRippleModule } from "@angular/material/core";
 
 @NgModule({
 	declarations: [MapPageComponent, MarkerComponent, LegendComponent],
@@ -15,7 +17,9 @@ import {MatButtonModule} from "@angular/material/button";
 		LeafletModule,
 		MatIconModule,
 		HttpClientModule,
-		MatButtonModule
+		MatButtonModule,
+		MatTooltipModule,
+		MatRippleModule
 	]
 })
 export class MapModule {}

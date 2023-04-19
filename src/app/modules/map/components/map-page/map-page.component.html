@@ -50,11 +50,13 @@
           </div>
           <div class="custom-leaflet-sidebar-content">
             <app-marker *ngFor="let sign of signs | keyvalue"
-                        [src]="assets.signs.compressed + '/' + sign.value.number + '.svg'"
-                        [alt]="sign.value.number"
-                        [title]="sign.value.title"
-                        [description]="sign.value.explanation"
+                        [iconSrc]="assets.signs.compressed + '/' + sign.value.number + '.svg'"
+                        [iconAlt]="sign.value.number"
+                        [iconTitle]="sign.value.number"
+                        [MarkerTitle]="sign.value.title"
+                        [MarkerDescription]="sign.value.explanation"
                         (click)="drawSign(sign.value.number + '.svg', sign.value.title)"
+                        (onLike)="addMarkerToFavourite(sign.key)"
             ></app-marker>
           </div>
         </div>

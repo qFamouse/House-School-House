@@ -1,24 +1,73 @@
-$marker-height: 50px;
-$image-with: 50px;
-
+$outer-space: .5em;
+$inner-space: 5px;
 
 .marker {
-  cursor: pointer;
-  display: grid;
-  grid-template-columns: $image-with 1fr;
-  padding: 5px 0;
-  gap: 3px;
+  //border: 1px solid black;
+  //border-right: none;
+  //border-left: none;
 
-  &:hover {
-    background: #eeeeee;
+  &_body {
+    display: grid;
+    grid-template-columns: 50px 1fr 25px;
+    padding: $outer-space;
   }
 
-  &__image {
-    width: $image-with;
+  &:hover, &_body:hover * {
+    background-color: #eeeeee;
+    cursor: pointer;
+  }
+}
+
+.test:hover {
+  background-color: #eeeeee;
+}
+
+.icon {
+  //border: 1px solid black;
+  //border-right: none;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: $inner-space;
+}
+
+.content {
+  //border: 1px solid black;
+
+  padding: $inner-space;
+  font-size: 1.3em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.actions {
+  padding: $inner-space 0 0 $inner-space;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: start;
+
+  &_like {
+    :hover, &__liked {
+      color: gold;
+    }
   }
 
-  &__description {
-    font-size: 1.5em;
-
+  &_info {
+    cursor: help;
   }
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }

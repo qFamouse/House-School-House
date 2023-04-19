@@ -1,5 +1,20 @@
-<div class="marker">
-    <img [src]="src" class="marker__image" [alt]="alt">
-    <div class="marker__description">{{title}}</div>
+<div matRipple class="marker no-select">
+  <div class="marker_body">
+    <div class="icon">
+      <img class="icon_image" [src]="iconSrc" [alt]="iconAlt">
+      <span class="icon_title">{{iconTitle}}</span>
+    </div>
+
+    <div class="content">{{MarkerTitle}}</div>
+
+    <div class="actions">
+      <div class="actions_like" (click)="like($event)">
+        <mat-icon>star</mat-icon>
+      </div>
+      <div class="actions_info">
+        <mat-icon [matTooltip]="MarkerDescription" matTooltipPosition="left">info</mat-icon>
+      </div>
+
+    </div>
+  </div>
 </div>
-<hr>
