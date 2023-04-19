@@ -8,3 +8,8 @@ html, body {
 .leaflet-pm-icon-route {
   background-image: url("~src/assets/route.svg");
 }
+
+.cdk-overlay-container {
+  // Map components has 1000 z-index, we need pull up sidebar tooltips
+  z-index: 1050; // default z-index: 1000 (by indigo-ping template)
+}
