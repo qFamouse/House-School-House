@@ -9,9 +9,9 @@ import { assets } from "../constants/assets";
 	providedIn: "root"
 })
 export class SignService {
-	private signs = new BehaviorSubject<Map<number, Sign>>(null);
+	private signs = new BehaviorSubject<Sign[]>(null);
 
-	public getAll(): Observable<Map<number, Sign>> {
+	public getAll(): Observable<Sign[]> {
 		return this.signs.asObservable();
 	}
 
@@ -48,22 +48,17 @@ export class SignService {
 	}
 
 	private assignCsvRecord(records: any[]) {
-		let signs = new Map<number, Sign>();
+		let signs = new Array<Sign>();
 
 		records.forEach(record => {
-			let id = record[0];
-
 			let sign: Sign = {
+				id: record[0],
 				number: record[1],
 				title: record[2],
 				explanation: record[3]
 			};
 
-			if (signs.has(id)) {
-				throw new Error("Violation of unique key constraint");
-			}
-
-			signs.set(id, sign);
+			signs.push(sign);
 		});
 
 		this.signs.next(signs);

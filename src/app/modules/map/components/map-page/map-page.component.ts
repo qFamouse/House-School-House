@@ -34,7 +34,7 @@ export class MapPageComponent implements OnDestroy {
 	mapOptions = mapOptions;
 	controlLayersConfig = controlLayersConfig;
 	layersControlOptions = layersControlOptions;
-	signs: Map<number, Sign> = null;
+	signs: Sign[] = null;
 	assets = assets;
 	constructor(
 		public signStorageService: SignStorageService,
