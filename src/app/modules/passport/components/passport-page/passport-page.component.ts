@@ -16,7 +16,6 @@ import { titularConfig } from "../../constants/passport-configs/titular-config";
 import { vehicleConfig } from "../../constants/passport-configs/vehicle-config";
 import { generalConfig } from "../../constants/passport-configs/general-config";
 import { PassportTemplateModel } from "../../models/passport-template.model";
-import { PassportConfigurationModel } from "../../models/passport-configuration.model";
 
 @Component({
 	selector: "app-passport-page",
@@ -40,20 +39,8 @@ export class PassportPageComponent {
 
 				let docPassport = new PassportTemplateModel();
 
-				function tryToFind(key): PassportConfigurationModel {
-					return titularConfig[key] || generalConfig[key] || vehicleConfig[key];
-				}
 				for (let key in this.passport) {
-					let title: string = this.passport[key] || "";
-
-					let freeLength = tryToFind(key)?.maxLength - title.length;
-					console.log(freeLength);
-					if (freeLength > 0) {
-						let subLength = Math.floor(freeLength / 2);
-						title = `${"_".repeat(subLength)}${title}${"_".repeat(subLength)}`;
-					}
-
-					docPassport[key] = title;
+					docPassport[key] = this.passport[key] || "";
 				}
 
 				doc.setData(docPassport);
