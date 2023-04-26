@@ -1,5 +1,10 @@
 import { Component } from "@angular/core";
-import { FormBuilder, FormGroup, ValidatorFn, Validators } from "@angular/forms";
+import {
+	FormBuilder,
+	FormGroup,
+	ValidatorFn,
+	Validators
+} from "@angular/forms";
 import { map, Observable } from "rxjs";
 import { StepperOrientation } from "@angular/material/stepper";
 import { BreakpointObserver } from "@angular/cdk/layout";
@@ -11,7 +16,6 @@ import { titularConfig } from "../../configuration/passport-configs/titular-conf
 import { vehicleConfig } from "../../configuration/passport-configs/vehicle-config";
 import { generalConfig } from "../../configuration/passport-configs/general-config";
 import { PassportTemplateModel } from "../../models/passport-template.model";
-import { PassportConfigurationModel } from "../../models/passport-configuration.model";
 
 @Component({
 	selector: "app-passport-page",
@@ -23,42 +27,34 @@ export class PassportPageComponent {
 
 	stepperOrientation: Observable<StepperOrientation>;
 	generate() {
-		PizZipUtils.getBinaryContent("/assets/passport-template.docx", (error: Error | null, content: string) => {
-			if (error) {
-				throw error;
-			}
-
-			const zip = new PizZip(content);
-			const doc = new Docxtemplater(zip, {});
-
-			let docPassport = new PassportTemplateModel();
-
-			function tryToFind(key): PassportConfigurationModel {
-				return titularConfig[key] || generalConfig[key] || vehicleConfig[key];
-			}
-			for (let key in this.passport) {
-				let title: string = this.passport[key] || "";
-
-				let freeLength = tryToFind(key)?.maxLength - title.length;
-				console.log(freeLength);
-				if (freeLength > 0) {
-					let subLength = Math.floor(freeLength / 2);
-					title = `${"_".repeat(subLength)}${title}${"_".repeat(subLength)}`;
+		PizZipUtils.getBinaryContent(
+			"/assets/passport-template.docx",
+			(error: Error | null, content: string) => {
+				if (error) {
+					throw error;
 				}
 
-				docPassport[key] = title;
+				const zip = new PizZip(content);
+				const doc = new Docxtemplater(zip, {});
+
+				let docPassport = new PassportTemplateModel();
+
+				for (let key in this.passport) {
+					docPassport[key] = this.passport[key] || "";
+				}
+
+				doc.setData(docPassport);
+				doc.render();
+
+				const out = doc.getZip().generate({
+					type: "blob",
+					mimeType:
+						"application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+				});
+
+				saveAs(out, "passport.docx");
 			}
-
-			doc.setData(docPassport);
-			doc.render();
-
-			const out = doc.getZip().generate({
-				type: "blob",
-				mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-			});
-
-			saveAs(out, "passport.docx");
-		});
+		);
 	}
 
 	titularFormGroup: FormGroup;
@@ -73,7 +69,10 @@ export class PassportPageComponent {
 	generalConfig = generalConfig;
 	vehicleConfig = vehicleConfig;
 
-	constructor(private formBuilder: FormBuilder, breakpointObserver: BreakpointObserver) {
+	constructor(
+		private formBuilder: FormBuilder,
+		breakpointObserver: BreakpointObserver
+	) {
 		this.stepperOrientation = breakpointObserver
 			.observe("(min-width: 800px)")
 			.pipe(map(({ matches }) => (matches ? "horizontal" : "vertical")));
