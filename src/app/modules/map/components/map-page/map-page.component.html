@@ -37,7 +37,19 @@
             <h1 class="leaflet-sidebar-header">Избранное</h1>
           </div>
           <div class="custom-leaflet-sidebar-content">
-            SOON
+            <ng-container class="custom-leaflet-sidebar-content"
+                          *ngFor="let sign of signs">
+              <app-marker *ngIf="favouriteSignService.has(sign.id)"
+                          [iconSrc]="assets.signs.compressed + '/' + sign.number + '.svg'"
+                          [iconAlt]="sign.number"
+                          [iconTitle]="sign.number"
+                          [MarkerTitle]="sign.title"
+                          [MarkerDescription]="sign.explanation"
+                          [isFavourite]="favouriteSignService.has(sign.id)"
+                          (click)="drawSign(sign.number + '.svg', sign.title)"
+                          (onLike)="favouriteSignService.addOrDelete(sign.id)"
+              ></app-marker>
+            </ng-container>
           </div>
         </div>
       </div>
@@ -55,8 +67,9 @@
                           [iconTitle]="sign.number"
                           [MarkerTitle]="sign.title"
                           [MarkerDescription]="sign.explanation"
+                          [isFavourite]="favouriteSignService.has(sign.id)"
                           (click)="drawSign(sign.number + '.svg', sign.title)"
-                          (onLike)="addMarkerToFavourite(sign.id)"
+                          (onLike)="favouriteSignService.addOrDelete(sign.id)"
               ></app-marker>
             </cdk-virtual-scroll-viewport>
         </div>

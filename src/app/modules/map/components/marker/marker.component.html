@@ -8,7 +8,7 @@
     <div class="content">{{MarkerTitle}}</div>
 
     <div class="actions">
-      <div class="actions_like" (click)="like($event)">
+      <div [ngClass]="{'actions_like__liked':isFavourite}" class="actions_like" (click)="like($event)">
         <mat-icon>star</mat-icon>
       </div>
       <div class="actions_info">

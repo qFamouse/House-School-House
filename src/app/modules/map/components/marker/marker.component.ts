@@ -11,6 +11,7 @@ export class MarkerComponent {
 	@Input() iconAlt: string = "Маркер";
 	@Input() MarkerTitle: string;
 	@Input() MarkerDescription: string;
+	@Input() isFavourite: boolean;
 
 	@Output() onLike = new EventEmitter<MouseEvent>();
 	like(event: MouseEvent) {

@@ -21,6 +21,7 @@ import { Sign } from "../../../../shared/models/sign";
 import { assets } from "../../../../shared/constants/assets";
 import { getRouteOptionsByMapProvider } from "../../utils/get-route-options-by-map-provider";
 import { Subject, takeUntil } from "rxjs";
+import { FavouriteSignService } from "../../../../shared/services/favourite-sign.service";
 
 @Component({
 	selector: "app-map-page",
@@ -41,7 +42,8 @@ export class MapPageComponent implements OnDestroy {
 	assets = assets;
 	constructor(
 		public signStorageService: SignStorageService,
-		public signService: SignService
+		public signService: SignService,
+		public favouriteSignService: FavouriteSignService
 	) {
 		signService
 			.getAll()
@@ -124,9 +126,5 @@ export class MapPageComponent implements OnDestroy {
 			const img = canvas.toDataURL("image/png");
 			saveAs(img, "legend.png");
 		});
-	}
-
-	addMarkerToFavourite(markerId: number) {
-		console.log("Some handler for marker: ", markerId);
 	}
 }
