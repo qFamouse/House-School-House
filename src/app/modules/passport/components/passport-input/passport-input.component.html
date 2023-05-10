@@ -3,15 +3,15 @@
   <input matInput [formControlName]="psFormControlName" [(ngModel)]="value">
 
   <mat-error *ngIf="abstractControl?.hasError('required')">
-    Обязательно к заполнению
+    Рекомендованно к заполнению
   </mat-error>
 
   <mat-error *ngIf="abstractControl?.hasError('minlength')">
-    Минимальная длинна {{abstractControl?.getError('minlength').requiredLength}}
+    Рекомендуемая минимальная длинна {{abstractControl?.getError('minlength').requiredLength}}
   </mat-error>
 
   <mat-error *ngIf="abstractControl?.hasError('maxlength')">
-    Максимальная длинна {{abstractControl?.getError('maxlength').requiredLength}}
+    Рекомендуемая максимальная длинна {{abstractControl?.getError('maxlength').requiredLength}}
   </mat-error>
 
 </mat-form-field>
