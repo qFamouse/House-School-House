@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="6.2.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   version="1.1"
+   id="svg2"
+   height="1050"
+   width="700">
+  <title
+     id="title3002">6.2 Больница</title>
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     inkscape:document-rotation="0"
+     inkscape:guide-bbox="true"
+     showguides="true"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-9"
+     inkscape:window-x="-9"
+     inkscape:window-height="1001"
+     inkscape:window-width="1920"
+     showgrid="false"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     inkscape:cy="647.71553"
+     inkscape:cx="544.7377"
+     inkscape:zoom="1"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>6.2 Больница</dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/" />
+        <dc:description>ГОСТ Р 52290-2004
+Размеры и пропорции по типоразмеру II</dc:description>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/3.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-2.362183)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <rect
+       ry="45"
+       rx="45"
+       y="2.3621831"
+       x="0"
+       height="1050"
+       width="700"
+       id="rect10481"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.543;marker:none;enable-background:accumulate" />
+    <path
+       id="rect10483"
+       d="m 45.000009,22.362155 c -13.85,0 -25,11.15 -25,25 V 1007.3622 c 0,13.85 11.15,25 25,25 H 655.00001 c 13.85,0 25,-11.15 25,-25 V 47.362155 c 0,-13.85 -11.15,-25 -25,-25 z M 110.62501,177.36216 h 478.75 c 24.93,0 45,20.07 45,45 v 478.75 c 0,24.93 -20.07,45 -45,45 h -478.75 c -24.930001,0 -45.000001,-20.07 -45.000001,-45 v -478.75 c 0,-24.93 20.07,-45 45.000001,-45 z"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#0d69e1;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.543;marker:none;enable-background:accumulate"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate"
+       id="rect10490"
+       width="698"
+       height="1048"
+       x="1.0000153"
+       y="3.3621678"
+       rx="44"
+       ry="44" />
+    <path
+       sodipodi:nodetypes="ccccccccccccc"
+       style="opacity:1;fill:#00a500;fill-opacity:1;stroke:none"
+       d="m 328.125,264.86217 v 65.625 H 262.5 v 43.75 h 65.625 v 65.625 h 43.75 v -65.625 H 437.5 v -43.75 h -65.625 v -65.625 z"
+       id="path12397"
+       inkscape:connector-curvature="0" />
+    <path
+       sodipodi:nodetypes="csccccscccccccc"
+       inkscape:connector-curvature="0"
+       d="m 109.375,461.73717 c 0,-12.08124 9.79377,-21.875 21.875,-21.875 12.08122,0 21.875,9.79376 21.875,21.875 v 109.375 h 393.75 v -65.625 c 0,-12.08124 9.79377,-21.875 21.875,-21.875 12.08122,0 21.875,9.79376 21.875,21.875 v 196.875 h -43.75 v -65.625 H 153.12495 l 5e-5,65.625 h -43.75 z"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.27612;marker:none;enable-background:accumulate"
+       id="path9397" />
+    <path
+       id="rect10172"
+       d="M 196.77246,519.77428 C 184.60296,520.38718 175,530.41598 175,542.74303 v 17.43164 h 131.25 v -17.43164 c 0,-12.72469 -10.24406,-22.96875 -22.96875,-22.96875 h -85.3125 c -0.39764,0 -0.80372,-0.0198 -1.19629,0 z"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.543;marker:none;enable-background:accumulate"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

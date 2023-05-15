@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="700"
+   height="700"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="4.5.4_Belarusian_road_sign.svg">
+  <title
+     id="title3002">4.5.4 Конец велосипедной дорожки с разрешённым движением пешеходов</title>
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.82571429"
+     inkscape:cx="132.00692"
+     inkscape:cy="350"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1304"
+     inkscape:window-height="745"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:snap-grids="true"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid83" />
+    <sodipodi:guide
+       position="350,285"
+       orientation="1,0"
+       id="guide91"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>4.5.4 Конец велосипедной дорожки с разрешённым движением пешеходов</dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/" />
+        <dc:description>ГОСТ Р 52290-2004
+Размеры и пропорции по типоразмеру II</dc:description>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/3.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-352.36218)">
+    <path
+       transform="matrix(15.832059,0,0,11.87835,1738.7986,-4432.173)"
+       d="m -65.613615,432.25998 c 0,16.27327 -9.89766,29.46537 -22.107042,29.46537 -12.209383,0 -22.107043,-13.1921 -22.107043,-29.46537 0,-16.27328 9.89766,-29.46537 22.107043,-29.46537 12.209382,0 22.107042,13.19209 22.107042,29.46537 z"
+       sodipodi:ry="29.465372"
+       sodipodi:rx="22.107042"
+       sodipodi:cy="432.25998"
+       sodipodi:cx="-87.720657"
+       id="path6124"
+       style="opacity:1;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:type="arc" />
+    <path
+       sodipodi:type="arc"
+       style="opacity:1;color:#000000;fill:none;stroke:#000000;stroke-width:0.14626010000000000;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;fill-opacity:1"
+       id="path6162"
+       sodipodi:cx="-87.720657"
+       sodipodi:cy="432.25998"
+       sodipodi:rx="22.107042"
+       sodipodi:ry="29.465372"
+       d="m -65.613615,432.25998 c 0,16.27327 -9.89766,29.46537 -22.107042,29.46537 -12.209383,0 -22.107043,-13.1921 -22.107043,-29.46537 0,-16.27328 9.89766,-29.46537 22.107043,-29.46537 12.209382,0 22.107042,13.19209 22.107042,29.46537 z"
+       transform="matrix(15.786825,0,0,11.844412,1734.8306,-4417.503)" />
+    <path
+       style="color:#000000;fill:navy;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="M 350,20 C 167.74603,20 20,167.74603 20,350 20,532.25397 167.74603,680 350,680 532.25397,680 680,532.25397 680,350 680,167.74603 532.25397,20 350,20 Z"
+       transform="translate(0,352.36218)"
+       id="path67" />
+    <path
+       id="path59"
+       style="color:black;display:inline;overflow:visible;visibility:visible;fill:white;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.83571374px;marker:none;enable-background:accumulate"
+       d="M 329.4372,879.97951 272.67398,963.49335 C 270.70598,965.49003 269.5,968.05045 269.5,970.85796 269.5,977.20896 275.56787,982.36218 283.0461,982.36218 288.09398,982.36218 292.50654,980.01586 294.83516,976.53786 L 294.97686,976.61008 349.27458,896.80262 Z M 378.35053,829.65459 V 855.3345 L 403.28895,876.48973 C 405.22355,878.13257 407.87526,879.16121 410.82714,879.16121 416.73106,879.16121 421.51098,875.1018 421.51098,870.08781 421.51098,867.5809 420.32803,865.32886 418.39369,863.68589 Z M 341.50967,787.60887 C 339.04889,787.60881 336.6015,788.1403 334.39656,789.22139 L 288.96897,811.48373 C 284.55915,813.646 281.85585,817.65266 281.85585,821.97711 V 864.33571 C 281.85585,869.34954 286.63594,873.40911 292.53969,873.40911 298.44345,873.40911 303.22354,869.34954 303.22354,864.33571 V 825.46687 L 325.32805,814.63654 V 865.41874 C 325.32805,867.02388 326.0887,868.5436 327.42514,869.67867 L 385.35029,918.92055 401.44689,973.62572 C 403.26045,979.78688 410.62876,983.54151 417.88359,982.00117 425.13838,980.46089 429.55917,974.20331 427.74559,968.04209 L 407.93655,900.7978 C 407.61351,899.69731 406.91347,898.69751 405.95279,897.90971 L 370.55726,867.82548 V 803.46929 C 370.55726,801.30699 369.21982,799.30367 367.01487,798.22259 L 348.62279,789.22139 C 346.41785,788.1403 343.97029,787.60887 341.50967,787.60887 Z M 346.69573,742.36218 C 338.86588,742.36218 325.80981,746.27328 325.80981,758.72802 325.80981,773.0388 353.09156,784.43198 361.65878,784.43198 373.72506,784.43198 379.25737,772.65833 379.25737,765.37062 379.25737,747.44644 353.32499,742.36218 346.69573,742.36218 Z"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path16853"
+       style="color:black;display:inline;overflow:visible;visibility:visible;fill:white;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.58876383px;marker:none;enable-background:accumulate"
+       d="M 473.38906,586.81227 C 457.49399,599.80091 446.65155,618.83881 444.44378,640.3834 H 510.87396 Z M 523.73301,568.88903 C 512.19606,568.88903 501.26174,571.33114 491.36195,575.74057 L 537.18786,641.17778 C 541.27282,647.01141 539.84403,655.0658 534.01033,659.15067 531.84239,660.66858 529.25916,661.48417 526.61265,661.48417 H 445.08921 C 451.25894,699.37095 484.1025,728.31155 523.73301,728.31155 567.75921,728.31155 603.4691,692.6017 603.4691,648.57546 603.4691,604.54939 567.75921,568.88903 523.73301,568.88903 Z M 174.70146,568.88903 C 131.62616,569.98035 97.050633,605.23732 97.050633,648.57546 97.050633,692.6017 132.76052,728.31155 176.78672,728.31155 220.8129,728.31155 256.47315,692.6017 256.47315,648.57546 256.47315,626.37662 247.43162,606.33024 232.79064,591.87645 L 214.81775,630.35433 C 211.86912,636.67746 207.05739,641.90981 201.01536,645.39794 L 181.4537,656.71788 C 176.96806,659.30757 171.18425,657.77782 168.59465,653.2921 166.00466,648.80639 167.58433,643.07254 172.07008,640.48269 L 191.63172,629.16276 C 194.34019,627.59894 196.51596,625.24502 197.83784,622.41052 L 217.54844,580.10967 C 205.6124,572.98482 191.69757,568.88903 176.78672,568.88903 176.09882,568.88903 175.38518,568.87107 174.70146,568.88903 Z M 441.31589,541.03601 398.91575,640.3834 H 430.29385 C 432.57399,614.06664 445.79065,590.87793 465.29629,575.29374 Z M 265.1617,527.82942 255.62912,542.87302 377.76534,636.26254 424.03809,527.82942 Z M 256.47315,422.37521 C 257.05262,422.34589 257.67376,422.37521 258.26052,422.37521 H 303.39134 C 308.57079,422.37521 312.77497,426.5296 312.77497,431.70921 312.77497,436.88865 308.57079,441.09283 303.39134,441.09283 H 258.26052 C 249.84374,441.09283 242.96867,447.9184 242.96867,456.33504 242.96867,461.83888 246.50299,466.75703 251.70686,468.54867 264.48001,472.9469 273.05588,484.97762 273.05588,498.48693 273.05588,501.28677 272.64128,504.04273 271.91395,506.72864 H 432.97488 L 438.4859,493.81994 H 397.1284 C 389.35904,493.81994 383.07777,487.53857 383.07777,479.76931 383.07777,471.99995 389.35904,465.71867 397.1284,465.71867 H 461.62228 C 469.39164,465.71867 475.72256,471.99995 475.72256,479.76931 475.72256,487.53857 469.39164,493.81994 461.62228,493.81994 H 456.3595 L 447.91919,513.67949 483.16989,564.02344 C 495.45145,558.11872 509.19437,554.78874 523.73301,554.78874 575.52855,554.78874 617.51973,596.78001 617.51973,648.57546 617.51973,700.37107 575.52855,742.36218 523.73301,742.36218 476.31236,742.36218 437.12372,707.17782 430.83998,661.48417 H 375.87868 L 246.44408,562.48432 238.99674,578.47126 C 258.33303,595.65058 270.52378,620.6755 270.52378,648.57546 270.52378,700.37107 228.58216,742.36218 176.78672,742.36218 124.99117,742.36218 83,700.37107 83,648.57546 83,596.78001 124.99117,554.78874 176.78672,554.78874 193.81699,554.78874 209.7402,559.36554 223.5063,567.30027 L 251.75651,506.72864 253.09703,503.9483 C 253.89281,502.24182 254.28859,500.36993 254.28859,498.48693 254.28859,492.9832 250.80382,488.06514 245.60005,486.27331 232.82669,481.87516 224.25103,469.84438 224.25103,456.33504 224.25103,438.14588 238.5097,423.28434 256.47315,422.37521 Z"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       style="color:black;display:inline;overflow:visible;visibility:visible;fill:red;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;enable-background:accumulate"
+       d="M 559.68725,447.51871 95.156,912.04996 C 108.51304,928.26365 123.41902,943.17838 139.5935,956.58118 L 604.8435,492.67496 C 591.28478,476.21645 576.14576,461.07743 559.68725,447.51871 Z"
+       id="path16853-0" />
+  </g>
+</svg>
