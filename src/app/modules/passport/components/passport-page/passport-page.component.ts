@@ -28,7 +28,7 @@ export class PassportPageComponent {
 	stepperOrientation: Observable<StepperOrientation>;
 	generate() {
 		PizZipUtils.getBinaryContent(
-			"/assets/passport-template.docx",
+			"assets/passport-template.docx",
 			(error: Error | null, content: string) => {
 				if (error) {
 					throw error;
