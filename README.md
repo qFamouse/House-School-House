@@ -1,11 +1,15 @@
 <p align="center">
-  <a href="https://plasmo.com">
-    <img alt="logo" width="75%" src="" />
+  <a href="#">
+    <img alt="logo" width="100%" height="500px" src="https://github.com/qFamouse/House-School-House/assets/30534091/506f1782-858b-4ee6-82a5-cd2e2f96586c" />
   </a>
 </p>
 
 <p align="center">
   Russian | <a href="#">English</a>
+</p>
+
+<p align="center">
+  <a font-weight="bold" href="https://qfamouse.github.io/House-School-House/">Preview</a>
 </p>
 
 # Дом-Школа-Дом
