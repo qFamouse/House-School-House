@@ -1,6 +1,6 @@
 <p align="center">
   <a href="#">
-    <img alt="logo" width="100%" height="500px" src="https://github.com/qFamouse/House-School-House/assets/30534091/506f1782-858b-4ee6-82a5-cd2e2f96586c" />
+    <img alt="logo" width="100%" height="300px" src="https://github.com/qFamouse/House-School-House/assets/30534091/2888a133-5f01-4d92-be94-82abad3c129b" />
   </a>
 </p>
 
