@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  Russian | <a href="#">English</a>
+  Russian | <a href="https://github.com/qFamouse/House-School-House/blob/master/i18n/README.en-US.md">English</a>
 </p>
 
 <p align="center">
